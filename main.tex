@@ -211,7 +211,7 @@ To better assess whether the predictions of the model were confirmed in experime
 
 \begin{table}
     \input{table1.tex}
-    \caption{A summary of network phenomena observed in biological experiments, in comparison with the base model, and several reduced models.}
+    \caption{A summary of network phenomena observed in biological experiments, in comparison with the base model, and several reduced models. For clarity, we use $\checkmark$ for "yes", $\times$ for "no", $\land$ for "up", $\lor$ for "down", and $=$ for "no effect".}
 \end{table}
 
 \subsection*{Sensitivity analysis}
@@ -315,7 +315,7 @@ and found eigenvectors $x_1$ .. $x_n$ of matrix $L$. Then we selected a number o
 
 $$u_{lm} = \frac{x_{lm}}{\sqrt{\sum_{z=1}^{k}{x_{lz}^2}}}$$
 
-where $x_{lm}$ is an $m$-th element of $l$-th eigenvector of $L$. We then used k-means clustering on rows of $\textbf{U}$ as points in $R^k$, looking for $k$ clusters. Once rows of $\textbf{U}$ (and so cells in the original data) were assigned to $k$ clusters, we calculated spectral modularity of this partition on the original matrix $w_{ij}$, using a weighted directed modification of classic formula from \citep{newman2006modularity}:
+where $x_{lm}$ is an $m$-th element of $l$-th eigenvector of $L$. We then used k-means clustering on rows of $\textbf{U}$ as points in $\mathbb{R}^k$, looking for $k$ clusters. Once rows of $\textbf{U}$ (and so cells in the original data) were assigned to $k$ clusters, we calculated spectral modularity of this partition on the original matrix $w_{ij}$, using a weighted directed modification of classic formula from \citep{newman2006modularity}:
 
 $$Q_k = \frac{1}{4m}\sum_{ij}{\delta_{ij}\Big(w_{ij}-\frac{d^{out}_i d^{in}_j}{2m}}\Big)$$
 
