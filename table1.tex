@@ -1,26 +1,29 @@
+% Help for tables:
+% https://en.wikibooks.org/wiki/LaTeX/Tables
+
 \begin{tabular}{llllllll}
 Observation & \multicolumn{1}{|l}{Imaging} & \multicolumn{6}{|c}{Model}\\
 \cline{3-8}
  & \multicolumn{1}{|l}{ } & \multicolumn{1}{|l}{Base} & 
  -STDP & \begin{tabular}-Syn.\\Comp.\end{tabular} & -Intrinsic & Visual & Noise \\
 \hline
-Brain FL selectivity	& 30\%	& 100\%	& 150\%	& 50\%	& -50\%		& 80\%	& 50\% \\
-Brain FL selectivity change	& =	& $\land$	$\lor$	& 	$\land$ $\lor$	& $\land$ & = & $\land$ & =\\
-Av. FL selectivity, $d$ & 0.6 & 0.8 & 1.0 & 0.6 & -7.0 & 0.8 & 0.5 \\
-Av. FL selectivity change & = & $\land$ & $\land$ $\lor$ & $\land$ & $\lor$ $\land$ & $\land$ & = \\
-\% FL selective cells & 98\% & 95\% & 75\% & 0\% & 95\% & 95\%\\
+Brain FL selectivity & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\times$ & $\checkmark$ & $\checkmark$ \\
+Brain FL selectivity, change & =	& $\land$	$\lor$	& 	$\land$ $\lor$	& $\land$ & = & $\land$ & =\\
+Av. FL selectivity $d$ & 0.6 & 0.8 & 1.0 & 0.6 & -7.0 & 0.8 & 0.5 \\
+Av. FL selectivity, change & = & $\land$ & $\land$ $\lor$ & $\land$ & $\lor$ $\land$ & $\land$ & = \\
+\% FL selective cells & 80\% & 98\% & 95\% & 75\% & 0\% & 95\% & 95\%\\
 \% FL selective cells, change & $= & \land & \land & \land \lor & = & \land & \land$\\
-FL 90-50 percentile change & $\lor$ & $\land$ & $\land$ $\lor$ & $\land$ & $\land$ $\lor$ & $\land$ & =\\
+FL 90-50 percentile, change & $\lor$ & $\land$ & $\land$ $\lor$ & $\land$ & $\land$ $\lor$ & $\land$ & =\\
 \hline
-Brain SL selectivity & $\times & \checkmark & \checkmark & \checkmark & \times & ? & ?$ \\
-Av. SL selectivity, $d$ & -0.05 & 0.5 & 0.7 & 0.5 & -0.5 & 0.2 & 0\\
-Av. SL selectivity change & = & $\land$ & $\land$ $\lor$ & $\land$ & $\lor$ & $\land$ & = \\
+Brain SL selectivity & $\times & \checkmark & \checkmark & \checkmark & \times & \checkmark & \times $ \\
+Av. SL selectivity $d$ & -0.05 & 0.5 & 0.7 & 0.5 & -0.5 & 0.2 & 0\\
+Av. SL selectivity, change & = & $\land$ & $\land$ $\lor$ & $\land$ & $\lor$ & $\land$ & = \\
 \% SL selective cells & 50\% & 80\% & 90\% & 70\% & 20\% & 70\% & 50\% \\
-\% SL selective cells, change & = & ? & ? & ? & ? & ? & ? \\
+\% SL selective cells, change & = & $\land$ & $\land$ & $\land$ & $\lor$ & $\land$ & $\lor$ \\
 SL 90-50 percentile change & = & $\land$ & $\land$ $\lor$ & $\land$ & - & $\land$ $\lor$ & -\\
 corr(FS,FL) & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\times$ & $\checkmark$ \\
 corr(SL,FL) & $\times$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$\\
-Stim. type reconstruction & - & $\land$ & $\land$ & $\land$ & $\lor$ & $\land$ & $\land$ $\lor$ \\
+Stim. decoding, change & = & $\land$ & $\land$ & $\land$ & $\lor$ & $\land$ & $\land$ $\lor$ \\
 \hline
 PCA complexity & $= & \land & \land & \land \lor & \land & \land & \land$\\
 N Ensembles, change & $\times$ & $\times$ & $\times$ & $\times$ & $\times$ & $\times$ & $\times$ \\
@@ -45,11 +48,12 @@ Modularity change & $\land$ & $\land$ & $\land$ & $\land$ & $\land$ & $\land$ & 
 Hierarchy change & = & $\land$ & $\land$ & $\land$ & $\land$ & $\land$ & -\\
 \hline
 \multicolumn{8}{l}{Properites of selective cells:}\\
-Central or peripheral & $\checkmark$ & $\times$ & $\times$ & $\times$ & = & $\times$ & no\\
+Grouped in the center & $\checkmark$ & $\times$ & $\times$ & $\times$ & $=$ & $\times$ & $\times$\\
+Grouped at the edges & $\times$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $=$ & $\checkmark$ & $\checkmark$\\
 Spatial grouping, change & $\lor$ & $\lor$ & $\lor$ & $\lor$ & $\land$ & $\lor$ & $\lor$ \\
 High $k_{in}$ & $\checkmark$ & $\times$ & $\times$ & $\checkmark$ & $\times$ & $\times$ & $\times$\\
 High Katz rank & $\checkmark$ & $\times$ & $\times$ & $\checkmark$ & $\times$ & $\times$ & $\times$\\
 Are more spiky & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\times$\\
 Assortative& $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$\\
-Unusual Clustering & = & low & = & high & low & = & =\\
+Unusual clustering coeff.& = & low & = & high & low & = & =\\
 \end{tabular}
