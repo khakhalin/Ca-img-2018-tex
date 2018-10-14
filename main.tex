@@ -108,7 +108,7 @@ Here we use high-speed Ca imaging data to infer connectivity of small sub-networ
 
 \section*{Results}
 
-For all mathematical methods, in the main text we provide their names, and the interpretation of the results, while definitions are given in the “Methods” section. For statistical analyses, we report p-values without correction, and interpret them according to Fisher, and not Neyman-Pearson philosophy \citep{greenland2016}. This approach is preferable for this study, as many of our analyses are not independent, but still ask different questions, and rely on different H0 hypotheses. At the interpretation step, we pay more attention to hypotheses supported by several alternative analyses.
+For all mathematical methods, in the main text we provide their names, and the interpretation of the results, while definitions are given in the “Methods” section. For statistical analyses, we report p-values without correction, and interpret them according to Fisher, and not Neyman-Pearson philosophy \citep{greenland2016}. This approach is preferable for this study, as many of our analyses are not independent, but still ask different questions, and rely on different null model hypotheses. At the interpretation step, we pay more attention to hypotheses supported by several alternative analyses.
 
 We performed Ca imaging in 14 stage 45-46 tadpoles, and 16 stage 48-49 tadpoles, recording responses from 128$\pm$40 tectal cells (between 84 and 229). Here and below, “$\pm$” after the mean denotes standard deviation, and unless stated otherwise, sample sizes $n=$ 14 and 16 animals for stage 46 and 49 tadpoles respectively apply to all analyses between younger and older animals. To each tadpole, we presented a sequence of three different stimuli, always in the same order: a looming stimulus, followed by a full-field flash, followed by a spatially “scrambled” looming stimulus. Scrambled stimuli were identical to looming, except that the visual field was split into a 7x7 grid of square tiles, and these tiles were randomly rearranged in space. In total we presented 60$\pm$11 stimuli to every animal, which means that a stimulus of every type was presented 20$\pm$4 times. High speed calcium imaging recordings were performed from one layer of “deep” principal tectal neurons in the tectum \citep{xu2011,truszkowski2017}; from these videos we then extracted fluorescence traces, and inferred average spiking of each neuron within every frame.
 
@@ -158,13 +158,13 @@ We then looked at whether connected cells were more likely to be located closer 
 
 \subsection*{Network properties}
 
-We measured several standard network properties for every connectivity graph reconstructed from tadpole tecta. For each age group, we used two approaches to check whether our network properties were statistically unusual. First, we compared network properties of our graphs to properties of randomly rewired graphs, in which the distribution of edge weights $w_{ij}$, and the number of edges adjacent to each node (node degrees) were kept fixed. This procedure is called degree-preserving rewiring \citep{maslov2002}. Second, we performed a similar comparison, but also randomized node degrees, by reassigning existing edges among all possible edges in a graph (full randomization). In theory, two different modes of randomization allowed us to ascribe non-randomness of observed network parameters to either non-random degree distribution, or non-randomness of meso-scale graph structure \citep{ansmann2012surrogate}. We also compared network statistics between younger and older tadpoles, to see whether network properties changed in development.
+We measured several standard network properties for every connectivity graph reconstructed from tadpole tecta. For each age group, we used two approaches to check whether our network properties were statistically unusual. First, we compared network properties of our graphs to properties of randomly rewired graphs, in which the distribution of edge weights $w_{ji}$, and the number of edges adjacent to each node (node degrees) were kept fixed. This procedure is called degree-preserving rewiring \citep{maslov2002}. Second, we performed a similar comparison, but also randomized node degrees, by reassigning existing edges among all possible edges in a graph (full randomization). In theory, two different modes of randomization allowed us to ascribe non-randomness of observed network parameters to either non-random degree distribution, or non-randomness of mesoscale graph structure \citep{ansmann2012surrogate}. We also compared network statistics between younger and older tadpoles, to see whether network properties changed in development.
 
-The measure of large-scale connectivity in the graph, named weighted \textbf{network efficiency}, is defined as the average inverse shortest path, for any two nodes in the network \citep{rubinov2010toolbox,latora2001efficiency}. This value is high when, on average, there is a short path between any two randomly chosen nodes, and so signals can be easily propagate within the graph; the value is low when some nodes are located far from each other on a graph (Fig. example). Traditionally, this measure interprets graph edges as pairwise distances between the nodes, with high value edges representing weak connections; for a graph of weights however, high value edges represent strong connections, so network efficiency is calculated on inverse weights $R_{ij} = 1/w_{ij}$ \citep{rubinov2010toolbox}. In our experiments, network efficiency (0.004$\pm$0.002 for stage 46, 0.002$\pm$0.002 for stage 49 tadpoles) was slightly lower than expected for a random network with matching degree distribution ($d$=$-$0.3, paired $p_t$=0.04 and $d$=$-$0.3, paired $p_t$=0.06 for younger and older tadpoles respectively), or a fully randomized network with the same distribution of edge weights ($d$=$-$0.5 and $-$0.05; paired $p_t$=0.02 and 0.01 for younger and older tadpoles respectively). Efficiency did not seem to change in development ($d$=$-$0.8, $p_t$=0.06).
+The measure of mesoscale connectivity in the graph, named weighted \textbf{network efficiency}, is defined as the average inverse shortest path, for any two nodes in the network \citep{rubinov2010toolbox,latora2001efficiency}. This value is high when, on average, there is a short path between any two randomly chosen nodes, and so signals can be easily propagate within the graph; the value is low when some nodes are located far from each other on a graph (Fig. example). Traditionally, this measure interprets graph edges as pairwise distances between the nodes, with high value edges representing weak connections; for a graph of weights however, high value edges represent strong connections, so network efficiency is calculated on inverse weights $R_{ji} = 1/w_{ji}$ \citep{rubinov2010toolbox}. In our experiments, network efficiency (0.004$\pm$0.002 for stage 46, 0.002$\pm$0.002 for stage 49 tadpoles) was slightly lower than expected for a random network with matching degree distribution ($d$=$-$0.3, paired $p_t$=0.04 and $d$=$-$0.3, paired $p_t$=0.06 for younger and older tadpoles respectively), or a fully randomized network with the same distribution of edge weights ($d$=$-$0.5 and $-$0.05; paired $p_t$=0.02 and 0.01 for younger and older tadpoles respectively). Efficiency did not seem to change in development ($d$=$-$0.8, $p_t$=0.06).
 
 Network \textbf{clustering coefficient} describes the small-scale heterogeneity in the network \citep{fagiolo2007}, and is defined as the relative frequency of two neighboring nodes forming a triangle via a third node that is connected to both of them (Fig. example). The value of clustering coefficient in our networks was small (2.4$\pm$2.5 e-3 for stage 46, 1.5$\pm$1.6 e-3 for stage 49 animals), but was still slightly larger than expected in a rewired network with same degree distribution ($d$=0.5 and 0.6, paired $p_t$=0.01 and 0.02 for younger and older animals), and similar to what would be expected for a random graph ($d$=0.1 and 0.2; paired $p_t$=0.4 and 0.3). This suggests that the observed distribution of degrees made the network less clustered than a random network, but the assortative arrangement of nodes countered this effect. There was no change in clustering in development ($d$=$-$0.4, $p_t$=0.3, Fig.).
 
-The network \textbf{modularity} is the most commonly used measure of large-scale network heterogeneity \citep{leicht2008community,newman2006modularity}. A network with high modularity can be split into a set of sub-networks, with higher density of connections within each sub-network, and weaker connections between sub-networks (Fig. example). In our experiments, the modularity of reconstructed networks did not differ from randomized networks with the same degree distribution ($d$=0.2 and 0.3, paired $p_t$=0.2 and 0.06, for stages 46 and 49 respectively). Randomized networks with matching degrees, however, were significantly less modular than a matching network ($d$=$-$0.6 and $-$0.4, paired $p_t$ = 3e-7 and 5e-5 respectively). The network modularity also increased in development ($d$=1.0, $p_t$ = 0.01), mostly due to changes in edge weights, as this effect did not disappear after random rewiring before comparison (for permutatoin rewiring, $d$=1.2, $p_t$=0.003).
+The network \textbf{modularity} is the most commonly used measure of mesoscale network heterogeneity \citep{leicht2008community,newman2006modularity}. A network with high modularity can be split into a set of sub-networks, with higher density of connections within each sub-network, and weaker connections between sub-networks (Fig. example). In our experiments, the modularity of reconstructed networks did not differ from randomized networks with the same degree distribution ($d$=0.2 and 0.3, paired $p_t$=0.2 and 0.06, for stages 46 and 49 respectively). Randomized networks with matching degrees, however, were significantly less modular than a matching network ($d$=$-$0.6 and $-$0.4, paired $p_t$ = 3e-7 and 5e-5 respectively). The network modularity also increased in development ($d$=1.0, $p_t$ = 0.01), mostly due to changes in edge weights, as this effect did not disappear after random rewiring before comparison (for permutatoin rewiring, $d$=1.2, $p_t$=0.003).
 
 The property of \textbf{hierarchical flow} is a derivative measure \citep{mones2012hierarchy} that we based on the distribution of Katz centrality values \citep{katz1953original,fletcher2018katz} (see below) within the network. Intuitively, flow hierarchy is high when connections between nodes largely point in the same direction, as it happens in layers networks, networks with chains of directed edges, or with activity sinks \citep{czegel2015hierarchy}. We hypothesized that a network of dedicated looming detectors may exhibit flow hierarchy, but the data we observed was hard to interpret, as structural non-randomness and the non-randomness of degree distribution affected hierarchical flow coefficients in opposite ways, with two effects cancelling each other. Indeed, observed networks were more hierarchical than randomized networks with matching degrees distribution ($d=$ 1.5 and 1.1, paired $p_t=$ 1e-04 and 1e-03 for younger and older tadpoles respectively), but randomized networks with matching degrees distribution were substantially less hierarchical than fully randomized networks with matching distribution of $w_{ji}$ ($d=-$4.5 and $-$2.6, paired $p_t=$ 4e-8 and 2e-6 respectively). There was no difference in development ($d=-$0.3, $p_t=$ 0.4).
 
@@ -184,7 +184,7 @@ We also hypothesized that on average selectivity for looming stimuli may gradual
 
 \subsection*{Developmental Model}
 
-As tectal networks we studied are complex and noisy, it is hard to provide a clear mechanistic interpretation of our results, especially as in some cases we used alternative ways to quantify the same intuition, and found the evidence conflicting. For example, for statistical network properties (Fig), the effects of non-random degree distribution and large-scale graph structure often affected network properties in opposite directions, leading to small total effects. Similarly, when we tried to quantify the “integrative” position of each cell within the connectivity graph, only some of these measurements correlated with cell selectivity for looming stimuli, and it was not clear which of these measurements are objectively “better”, in terms of encapsulating the true properties of the network.
+As tectal networks we studied are complex and noisy, it is hard to provide a clear mechanistic interpretation of our results, especially as in some cases we used alternative ways to quantify the same intuition, and found the evidence conflicting. For example, for statistical network properties (Fig), the effects of non-random degree distribution and mesoscale graph structure often affected network properties in opposite directions, leading to small total effects. Similarly, when we tried to quantify the “integrative” position of each cell within the connectivity graph, only some of these measurements correlated with cell selectivity for looming stimuli, and it was not clear which of these measurements are objectively “better”, in terms of encapsulating the true properties of the network.
 
 To compensate for these limitations, and to provide a theoretical counterpoint to our observations, we created a mathematical model of the developing tectum, and ran this model through the same set of measurements that we applied to our experiments. The model consisted of 81 artificial neurons, arranged in a 9 by 9 grid, that were originally all connected to each other (every neuron to every neuron) with random positive (excitatory) synaptic weights (Fig). The model operated in 10 ms increments, and we interpreted the output of each neuron as its expected spiking frequency. At each time frame we looked at the activity of the network in the previous frame, calculated the synaptic inputs each neuron would send to each other neuron, and summed them up to calculate the total activation of each neuron. We then used a sliding logistic function to estimate the probability of spiking in postsynaptic neurons, in response to this total activation. See “Methods” for the formulas, and the detailed description of the model.
 
@@ -208,12 +208,12 @@ The distribution of degrees in the model was very similar to that in the biologi
 
 Finally, we observed that most network measures changed with network development (Fig): efficiency and modularity increased, while clustering decreased. In all three cases, the changes were mainly due to changes in weight and degree distribution, as they persisted if calculated on networks randomized with degree-preserving rewiring (Fig). The hierarchical flow increased mildly in development, and this was entirely due to structured changes in network topology, as the effect was not present in rewired graphs. A robust increase in modularity may seem to be in contradition with a stable number of ensembles detected in the network, as network modules are expected to form activity ensembles \citep{triplett2018emergence}. We assume that the reason for this difference was that both in biological and computational experiments, we tried to identify ensembles in highly structured responses, and not in long recordings of spontaneous activity.
 
-To better assess whether the predictions of the model were confirmed in experiments, we formulated a list of “atomic”, elementary statements about each of the measures were analyzed, looking at whether they changed in development, whether they increased or decreased, and whether they differed from similar measures in a randomized network (Table 1). For each of these statements, we then compared the model to the experimental data, and labeled each comparison as either a match (Y), a clear contradiction (N), or an unclear case (no label). We used “no label” for all cases when the model predicted a change, but the comparison between tadpoles of different ages had p-value above 0.05, to reflect that developmental trajectories in the model and in real tadpoles were not well matched, and also that the sample size in our biological experiments was relatively small (see Discussion). Overall, the model and the experiments were compatible in terms of flash-looming selectivity, but did not match in terms of scrambled-looming selectivity. The interplay between cell position and connectivity was similar in the model and in biological experiments, except for the spatial distribution of looming-selective cells within the retinotopic map, which was peripheral in the model, but central in tadpoles. Changes in degree distribution were very similar, but except for modularity, other network measures did not match. When correlations between different measures of node centrality and cell collectivity were considered, some of them matched, but many did not.
+To better assess whether the predictions of the model were confirmed in experiments, we formulated a list of “atomic”, elementary statements about each of the measures were analyzed, looking at whether they changed in development, whether they increased or decreased, and whether they differed from similar measures in a randomized network (Table 1, first two columns). Overall, the model and the experiments were similar in flash-looming selectivity, but did not match in terms of scrambled-looming selectivity. The interplay between cell position and connectivity was also similar, except for the spatial distribution of looming-selective cells within the retinotopic map, which was peripheral in the model, but central in tadpoles. Changes in degree distributions were well matched, but except for modularity, other network measures did not match. When correlations between different measures of node centrality and cell selectivity were considered, some of them matched, but many did not.
 
 \newgeometry{left=1in} % This page will have smaller margins
 \begin{table}
     \input{table1.tex}
-    \caption{A summary of network phenomena observed in biological experiments, in comparison with the base model, and several reduced models. For clarity, we use $\checkmark$ for "yes", $\times$ for "no", $\land$ for "increase", $\lor$ for "decrease", $\land \lor$ for "increase followed by decrease", and $=$ for "no change".}
+    \caption{A summary of network phenomena observed in biological experiments, in comparison with the base model, and several reduced models. For clarity, we use $\checkmark$ for "yes", $\times$ for "no", $\land$ for "increase", $\lor$ for "decrease", $\land \lor$ for "increase followed by decrease", and $=$ for "no change". FL stands for "Flash-Looming" comparisons; SL - Scrambled-Looming comparisons; corr denotes correlation.}
 \end{table}
 \restoregeometry
 
@@ -239,13 +239,13 @@ The changes in degree distribution, observed both in the model and in imaging ex
 
 The sensitivity analysis for the model showed that of all components it had, patterned visual stimulation was the most important. The model continued to converge to a state that made looming detection possible even if STDP, synaptic competition, or intrinsic plasticity were disrupted, but it failed if the sensory inputs were kept random. Moreover, as long as the intrinsic plasticity was present, the model became sensitive to looming stimuli on average, on a sell-by-cell basis, as well as in terms of its total response. Interestingly, it was not critical for the model to be trained on looming stimuli, as we originally expected; it performed equally well with a mix of looming, receding, and transitioning stimuli, which means that it is the stimulus locality and edge continuity that mattered. This also suggests that proper intratectal network organization can probably emerge from responses to retinal waves alone, provided that retinal waves have spatial and temporal statistics similar to that of a shade with a smooth edge moving across the visual field.
 
-At the same time, our measure of network convergence - the possibility of selecting a subset of “tectal cells” to build a reliable detector of looming stimuli - relies on an assumption that in development, the animal has access to both “training” looming stimuli and a learning signal. We assume that for a real tadpole, this signal may come either from dimming receptors in the retina, or from mechanosensory and lateral line receptors in the body, and that it can act on tectal connections to the reticulospinal neurons in the hindbrain. Moreover, during random encounters with objects in space, different parts of the retina would be dimmed, and different parts of the lateral line would be activated, giving a tadpole enough information to build several overlapping subnetworks, each selective for impeding collisions of different geometry, and projecting to different subsets of motor neurons. Therefore, this type of training could conceivably lead to the development of nuanced escape responses, that use the spatial context to optimize avoidance behaviors \citep{khakhalin2014}[xxx fish refs].
+At the same time, our measure of network convergence - the possibility of selecting a subset of “tectal cells” to build a reliable detector of looming stimuli - relies on an assumption that in development, the animal has access to both “training” looming stimuli and a learning signal. We assume that for a real tadpole, this signal may come either from dimming receptors in the retina, or from mechanosensory and lateral line receptors in the body, and that it can act on tectal connections to the reticulospinal neurons in the hindbrain. Moreover, during random encounters with objects in space, different parts of the retina would be dimmed, and different parts of the lateral line would be activated, giving a tadpole enough information to build several overlapping subnetworks, each selective for impeding collisions of different geometry, and projecting to different subsets of motor neurons. Therefore, this type of training could conceivably lead to the development of nuanced escape responses, that use the spatial context to optimize avoidance behaviors \citep{khakhalin2014}[XXX fish refs].
 
 \section*{Methods}
 
 \subsection*{Statistics and reporting}
 
-Unless stated otherwise, all values are reported as mean $\pm$ standard deviation. For most common tests, the type of a test is indicated by the subscript for its reported p-value: $p_t$ for a two-sample t-test with two tails and unequal variances; $p_{t1}$ for a one-sample two-tail t-test; $p_r$ for a Pearson correlation test; $p_{bin}$ for a one-tail binomial test, and $p_F$ for the analysis of variance (ANOVA, ANCOVA, multilinear regression).
+Unless stated otherwise, all values are reported as mean $\pm$ standard deviation. For most common tests, the type of a test is indicated by the subscript for its reported p-value: $p_t$ for a two-sample t-test with two tails and unequal variances; $p_{t1}$ for a one-sample two-tail t-test, and $p_r$ for a Pearson correlation test.
 
 Note also that in this paper we consistely describe adjacency matrices as they are used in computational neuroscience, where $w_{ji}$ is a weight of an edge coming from node $i$ to node $j$, which is different from how adjacency matrices are used in graph theory, where $A_{ji}$ would typically mean an edge from node $j$ to node $i$ (and so $W = A^\top$).
 
@@ -253,7 +253,7 @@ Note also that in this paper we consistely describe adjacency matrices as they a
 
 Our experiments followed the procedure previously described in \citep{xu2011,truszkowski2017}, with visual stimulation described in \citep{khakhalin2014}. All experimental procedures were performed at Brown University, in accordance with university IACUC protocols. Except noted otherwise, all chemicals were purchased from Sigma. Tadpoles were kept in Steinberg’s solution, on a 12/12 light cycle, at 18$^\circ$ C for 10-20 days, until they reached Nieuwkoop-Faber developmental stages 45-46 or 48-49. In each experiment, we anesthetized a tadpole with 0.02\% tricainemethane sulfonate (MS-222) solution for 5 minutes, then paralyzed it by immersion in 20 mM solution of tubacurarine for 5 minutes, and pinned it down to a carved Sylgard block within the recording chamber, filled with artificial cerebro-spinal fluid solution (ACSF: 115 mM NaCl, 4 mM KCl, 5 mM HEPES, 10 uM glycine, 10 mM glucose). The optic tectum was exposed, and ventricular membrane was removed on one side of the tectum. Tadpoles were pinned tilted, at an angle of 10-20$^\circ$, to keep the exposed tectal surface flat for imaging. We then surrounded the tadpole with a small circular enclosure 15 mm in diameter, made of a thicker part of a standard plastic transfer pipette, to achieve higher concentration of Ca-sensitive dye in the solution. We dissolved 50 ug of Oregon Green Bapta 1 solution (OGB1 $\#$06807, Molecular Probes, Waltham, MA) in 30 ul of medium consisting of 4\% F-127 detergent in 96\% DMSO by weight; agitated this solution in a sonicator for 15 minutes, then added 30 ul of ACSF to the vial, and sonicated for 10 minutes more. The solution was then transferred to the chamber, mixed with 4 ml of ACSF to the final concentration of 10 uM, and the chamber was placed in the dark for 1 hour. After staining, the circular enclosure was removed; the preparation was washed with 10 ml of ACSF 3 times; the chamber was filled with 10 ml of fresh ACSF, and transferred under the scope.
 
-Visual stimulation was provided with a previously described setup \citep{khakhalin2014}, consisting of an LCD screen (Kopin Corporation, Taunton, MA, USA) illuminated by a blue LED (LXHL-LB3C, 490 nm; Lumileds Lighting, USA), with the image projected to an optic multifiber (600 um, Fujikura Ltd, Tokyo, Japan). The other end of the fiber was brought to the left eye of the tadpole, and placed 400 um away from the lens, and on the axis of the eye, to have the image projected to the center of the retina. The stimulation sequence consisted of three stimuli: looming stimulus (in which a circle appeared in the center of the field, its radius growing linearly from 0 to full-field within 1 second), full-field flash, and spatially “scrambled” stimulus. For the scrambled stimulus, we divided the field of view into a grid of 17 by 17 squares and randomly reassigned these squares within the image. The result was a stimulus that was identical to looming stimulus in terms of its total brightness at every time step, and presented fragments of a moving edge locally (within every square in a reshuffling grid), but lacked large-scale spatial organization. The permutation of squares within the grid was randomized for each experiment, but consistent within all trials within an experiment. The stimuli were delivered every 20 s, in a sequence “looming, flash, scrambled”, usually for the total of 60 or 72 stimuli. The stimuli were generated in Matlab (Mathworks), using Psychtoolbox \citep{kleiner2007psychtoolbox}. Imaging excitation light was turned on 1 s before the onset of the visual stimulus, which was shown not to interfere with visual stimulation \citep{xu2011}, and kept on for 5 s.
+Visual stimulation was provided with a previously described setup \citep{khakhalin2014}, consisting of an LCD screen (Kopin Corporation, Taunton, MA, USA) illuminated by a blue LED (LXHL-LB3C, 490 nm; Lumileds Lighting, USA), with the image projected to an optic multifiber (600 um, Fujikura Ltd, Tokyo, Japan). The other end of the fiber was brought to the left eye of the tadpole, and placed 400 um away from the lens, and on the axis of the eye, to have the image projected to the center of the retina. The stimulation sequence consisted of three stimuli: looming stimulus (in which a circle appeared in the center of the field, its radius growing linearly from 0 to full-field within 1 second), full-field flash, and spatially “scrambled” stimulus. For the scrambled stimulus, we divided the field of view into a grid of 17 by 17 squares and randomly reassigned these squares within the image. The result was a stimulus that was identical to looming stimulus in terms of its total brightness at every time step, and presented fragments of a moving edge locally (within every square in a reshuffling grid), but lacked mesoscale spatial organization. The permutation of squares within the grid was randomized for each experiment, but consistent within all trials within an experiment. The stimuli were delivered every 20 s, in a sequence “looming, flash, scrambled”, usually for the total of 60 or 72 stimuli. The stimuli were generated in Matlab (Mathworks), using Psychtoolbox \citep{kleiner2007psychtoolbox}. Imaging excitation light was turned on 1 s before the onset of the visual stimulus, which was shown not to interfere with visual stimulation \citep{xu2011}, and kept on for 5 s.
 
 The tectum was imaged using a Nikon Eclipse FN1 microscope with a 60x water-immersion objective and an ANDOR 860 EM-CCD camera. NIS-elements software (Nikon) was used to record the activity, with binning of 8x8 pixels per bin, resulting in a 130x130 image covering the field of view of 1130 um. The data was acquired with 10 ms auto-exposure, which led to actual frame rate of 84 frames per second (11.9 ms per frame). For each preparation, we used a focal plane that produced images of as many cells as possible, which usually meant a plane focused “in-between” the topmost and bottom-most cells within the field of view. To keep the signal to noise ratio consistent throughout the experiment despite the ongoing bleaching of the Ca sensor, we started with relatively weak illumination (with neutral density filter ND4 engaged) and no signal amplification by the camera (EM gain of 0). We then increased the EM gain level gradually after every 12 stimuli, to keep the signal level approximately constant. Once EM gain setting reached the value of “7”, we increased illumination strength by disengaging one of the density filters, reduced EM gain back to 0, and repeated the process.
 
@@ -265,62 +265,63 @@ In this series of experiments, we did not attempt to match inferred spike trains
 
 \textbf{Basic analysis} For response amplitudes, we used average reconstructed responses between 250 and 2000 ms into the recording, as this window included visual responses, but excluded artifacts caused by the excitation light. As a measure of stimulus selectivity for each cell, and in some cases for the selectivity of total network response, we used Cohen’s $d$ effect size for the difference between responses to looming and flash, or looming and scrambled stimuli:
 
-$$d = (m_L-m_F)/ \sqrt{ \big((n_L-1) s^2_L + (n_F-1) s^2_F)/(n_L + n_F - 2)} =$$
-
-$$=(m_L-m_F)/\sqrt{\big(s^2_L+s^2_F\big)/2}$$
+\[ d = (m_L-m_F)/ \sqrt{ \big((n_L-1) s^2_L + (n_F-1) s^2_F)/(n_L + n_F - 2)} = \]
+\[ =(m_L-m_F)/\sqrt{\big(s^2_L+s^2_F\big)/2} \]
 
 in case of equal sample sizes $n_L=n_F=n$. Here $m_L$ and $m_F$ are mean responses to looming and flash stimuli respectively, and $s_L$ , $s_F$ are standard deviations for both groups.
 
 To find the \textbf{retinotopy center}, we concatenated all responses of every cell to looming stimuli into one long vector, ran a principal component analysis on these vectors, then rotated two first components using promax rotation, and made sure that the 1st component $c^1$ is the one with shorter latency, and that it is positive, flipping the components if necessary. We then ran a non-linear optimization, looking for a pair of coordinates for the “retinotopy center” $(x,y)$ that would maximize the absolute value of correlation between distances of each cell to this center and the prominence of the short-latency component in this cell:
 
-$$r = \text{cor}\big(\sqrt{(x_i-x)^2+(y_i-y)^2}\ ,\ c^1_i/(c^1_i + c^2_i), \big)$$
+\[ r = \text{cor}\big(\sqrt{(x_i-x)^2+(y_i-y)^2}\ ,\ c^1_i/(c^1_i + c^2_i), \big) \]
 
 For \textbf{response latency} calculations, we looked at each response $y(t)$, and found the position of its maximum $(x_M, y_M)$. We then used the least squares fit with non-linear solved to approximate the segment between the beginning of the response and $x_M$ with a piecewise linear function:
 
-$$ f(x) = \left \{ \begin{tabular}{cll} 0 & \text{for} & 0 \leqslant x<x_L \\
-\math{a (x-x_L)} & \text{for} & \math{x_L\leqslant x < x_M} \end{tabular}$$ 
+\[ f(x) = \left \{ \begin{array}{cll} 0 & \text{for} & 0 \leqslant x<x_L \\
+a (x-x_L) & \text{for} & x_L\leqslant x < x_M \end{array} \right. \]
 
 optimizing for $x_L$ and $a$, where $x_L$ is the response latency, and $a$ is an amplitude-like parameter we did not use for subsequent analysis. This approach worked well for isolated responses with good signal to noise ratio, but got increasingly noisy with weak signals. To quantify the retinotopy, we therefore used the results of factor analysis, and only referred to response latencies for verification.
 
 \textbf{Ensemble analysis}. To find ensembles of cells that tended to be co-active together, we used a modified spectral clustering procedure \citep{ng2002spectral} and the definitinon of spectral modularity \citep{newman2006modularity}, generalized to weighted oriented graphs. First, for each stimulus type, for each cell $i$, and separately for each experimental trial $k$, we unbiased and normalized each activity response $a^k_i(t)$, by subtracting its mean, and dividing the result over standard deviation:
 
-$$a^k_i(t)’ = \big(a^k_i(t)-b^k_i\big)/\sigma^k_i$$
+\[ a^k_i(t)' = \big(a^k_i(t)-b^k_i\big)/\sigma^k_i \]
 
 where $b^k_i = \sum_{t=1}^T{a^k_i(t)}$ and $\sigma^k_i = \frac{1}{T-1}\sum_{t=1}^T{(a^k_i(t) - b^k_i))}$ .
 
-Then, for each cell, we calculated the average response across all trials of the same type: $$\overline{a_i}(t) = \frac{1}{n}\sum_{k=1}^n{a^k_i(t)}$
+Then, for each cell, we calculated the average response across all trials of the same type: 
+
+\[ \overline{a_i}(t) = \frac{1}{n}\sum_{k=1}^n{a^k_i(t)} \]
 
 and subtracted these average responses from each trial, which resulted in a vector of a trial-by-trial deviations from the average response:
 
-$$a^k_i(t)’’ = a^k_i(t)’ - \overline{a_i}(t)$$
+\[ a^k_i(t)'' = a^k_i(t)' - \overline{a_i}(t) \]
 
 We then used these vectors of deviations from the mean, concatenated across all trials, to calculate a cross-correlation matrix, to see which cells tended to be unusually active or unusually inactive together:
 
-$$c_{ij} = \text{corr}\big(a’’_i(k,t)\, , \, a’’_j(k,t)\big)$$
+\[ c_{ij} = \text{corr}\big(a''_i(k,t)\, , \, a''_j(k,t)\big) \]
 
 We calculated adjusted correlations $c_{ij}$ separately for each of three types of stimuli (flash, scramble, and looming), and averaged these three estimations $c_{ij}^s$, to arrive at a, hopefully, less noisy estimation of adjusted cross-correlation. We then removed negative correlations, replacing them with zeroes.
 
-$$c’_{ij} = \text{max}\big(0 \, , \, \frac{1}{3} \sum_{s}{c_{ij}^s}\big)$$
+\[ c'_{ij} = \text{max}\big(0 \, , \, \frac{1}{3} \sum_{s}{c_{ij}^s}\big) \]
 
 We then roughly followed the spectral clustering approach by \citep{ng2002spectral}, with some adjustments that seemed appropriate for ensemble detection. We first transformed our correlation matrix $c_{ij}$ into a matrix of pairwise Euclidean distances:
 
-$$\varphi_{ij} = 2(1-c_{ij})$$
+\[ \varphi_{ij} = 2(1-c_{ij}) \]
 
 and then to affinity matrix $\textbf{A}$:
 
-$$a_{ij} = \text{exp}(-\varphi_{ij}/\sigma)$$
+\[ a_{ij} = \text{exp}(-\varphi_{ij}/\sigma) \]
 
 where $\sigma$ is a free parameter that we set at 10000. We then calculated a diagonal degree matrix $\textbf{D}$ such that $d_{ij} = 0$ for $i \neq j$ , and $d_{ii} = \sum_k{a_ik}$ otherwise. We used $\textbf{D}$ to build a Laplacian matrix $L$, such as:
 
-$$L_{ij} = a_{ij}/\sqrt{d_{ii}\cdot d_{jj}}$$
+\[ L_{ij} = a_{ij}/\sqrt{d_{ii}\cdot d_{jj}} \]
 
 and found eigenvectors $x_1$ .. $x_n$ of matrix $L$. Then we selected a number of ensembles to find $k$, going through all values from 1 (no ensembles) and up to the number of cells (each cell as a separate ensemble). For each $k$, we found first $k$ largest eigenvectors of $L$, stacked them in columns, and renormalized each row of this matrix to give it unit length:
 
-$$u_{lm} = \frac{x_{lm}}{\sqrt{\sum_{z=1}^{k}{x_{lz}^2}}}$$
+\[ u_{lm} = \frac{x_{lm}}{\sqrt{\sum_{z=1}^{k}{x_{lz}^2}}} \]
 
 where $x_{lm}$ is an $m$-th element of $l$-th eigenvector of $L$. We then used k-means clustering on rows of $\textbf{U}$ as points in $\mathbb{R}^k$, looking for $k$ clusters. Once rows of $\textbf{U}$ (and so cells in the original data) were assigned to $k$ clusters, we calculated spectral modularity of this partition on the original matrix $w_{ij}$, using a weighted directed modification of classic formula from \citep{newman2006modularity}:
 
-$$Q_k = \frac{1}{4m}\sum_{ij}{\delta_{ij}\Big(w_{ij}-\frac{d^{out}_i d^{in}_j}{2m}}\Big)$$
+\[ Q_k = \frac{1}{4m}\sum_{ij}{\delta_{ij}\Big(w_{ij}-\frac{d^{out}_i d^{in}_j}{2m}}\Big) \]
 
 Here $d^{out}_i$ and $d^{in}_j$ are weighted out- and in-degrees for nodes $i$ and $j$ respectively: $d^{out}_i = \sum_k{w_{ik}}$ , and $d^{in}_j = \sum_k{w_{kj}}$ ; $m$ is the total number of edges involved: $m = \sum_{ij}{w_{ij}}/2$ , and $\delta_{ij}$ is a signal matrix with $\delta_{ij}=1$ for nodes $i$ and $j$ that belong to the same cluster, and $\delta_{ij} = 0$ otherwise. We then found the number of clusters $K$ that, after spectral clustering, produced highest modularity $Q_K$ across all $Q_k$, and used $K$ as an estimation of the number of ensembles in the network, and corresponding cluster allocation - as the allocation of cells to these ensembles.
 
@@ -328,15 +329,15 @@ Here $d^{out}_i$ and $d^{in}_j$ are weighted out- and in-degrees for nodes $i$ a
 
 For each cell, we took its inferred activity train, and binned it at 3 levels, classifying every frame as either a frame with high, medium, or low activity. For each cell, we used 1/3 and 2/3 quantiles of its inferred activity train values as levels thresholds, so that all three types of frames were equally frequent, as this optimized the entropy of representation, while retaining low binning count. Then for each pair of neurons $i$ and $j$ we calculated the probability $P(k_j^1,k_j^0,k_i^0)$, which showed the conditional probability of neuron $j$ being in state $k_j^1$ (either 1, 2, or 3) at moment $t$, if this neuron was in a state $k_j^0$ at the previous frame $t-1$, and  input neuron $i$ was in state $k_i^0$ at the same frame $t-1$. From this set of probabilities, we calculated conditional probabilities of $P(k_j^1 \mid k_j^0)$, and finally calculated the total transfer entropy as
 
-$$T_{ij} = \sum_{lmn=1}^3{P(k_j^1=l,k_j^0=m,k_i^0=n)}\cdot \log\left(\frac{P(k_j^1=l , \mid , k_j^0=m, , k_i^0=n)}{P(k_j^1=l , \mid , k_j^0=m)}\right)$$
+\[ T_{ij} = \sum_{lmn=1}^3{P(k_j^1=l,k_j^0=m,k_i^0=n)}\cdot \log\left(\frac{P(k_j^1=l , \mid , k_j^0=m, , k_i^0=n)}{P(k_j^1=l , \mid , k_j^0=m)}\right) \]
 
 In our project, common drive (visual input from the retina) presents a particular problem. If detection of looming stimuli happens mainly through activation of selected synfire chains, the pattern of this activation would be necessarily synchronized with the causal transfer of excitation from one node to another. Because of that, it cannot be eliminated by methods that rely on the comparison of delays \citep{wollstadt2014te}. Instead, we eliminated the effects of common drive by reshuffling our data, and pairing activation history of each cell with activation history of other cells for reshuffled, unmatching trials recorded in response to same stimulus type. For each experiment, we calculated 1000 randomly reshuffled transfer entropy estimations, and then subtracted the average of these reshuffled TE estimations from our TE estimation, arriving at the value of adjusted TE \citep{gourevitch2007te}:
 
-$$T’_{ij} = T_{ij} - T^{\text{shuffled}}_{ij}$$
+\[ T'_{ij} = T_{ij} - T^\text{shuffled}_{ij} \]
 
 This approach is similar to the idea of analyzing subtle variations in activation from one response to another, as opposed to the analysis of activation traces themselves. As the stimuli we presented were same in every trial, the progression of the common drive over time was shared across all trials. If a connection between cells $i$ and $j$ was suggested by the analysis of reshuffled data, these cells were clearly sequentially driven by a common input, and not by a true causal connection between them.
 
-For each TE estimation, we also calculated a corresponding p-value, to quantify whether the observed TE was significantly different from the set of TE estimations obtained on surrogate data, corresponding to H0 of fully shared drive, and no causal connections. With the computational power available, we could only afford to generate 1000 surrogate reshuffled networks for every TE calculation, which made it impossible to use the false discovery rate correction on our data, as it is recommended for fMRI-based studies of large-scale brain connectivity [Vicente 2011; Lindner 2011]. With $\sim$10$^2$ neurons and 10$^4$ connections the smallest possible non-zero p-value of 0.001, corresponding to finding a more extreme TE value in one out of 1000 surrogate experiments, was already larger than the Benjamini-Hochberg threshold of $\frac{k}{m}\alpha=$5e-6. With a permissive threshold of $\alpha$=0.01, each subset of data (recordings of responses to collisions, flashes, and scrambled stimuli), when taken separately, suggested the existence of 2\% to 69\% of all possible directed edges in the graph, depending on the experiment (median of 8\%). The share of edges that were independently discovered in all three types of experiments (median value of 0.1\% of all possible edges) was on average 1.8 times larger than one would expect in case of spurious and independent discovery (signrank $p$=7e-7), suggesting that the three subsets of data, originating from responses to three different stimuli, can be considered replications for the purposes of edge discovery. At the same time, when we tried to restrict our analysis only to edges that were fully replicated in all 3 sets with $\alpha < $0.05, we ended up with the median graph size of only 18 edges (6 edges in the largest connected component). The overwhelming majority (18 out of 19) of datasets with fewer than 10 reconstructed edges were recorded in the early set of experiments, when our dye transfer from DMSO to ACSF was still imperfect. As during data acquisition, we alternated between stage 46 and 49 tadpoles, the set of “weak” experiments was not biased, and consisted of 10 younger, and 9 older tadpoles. We decided to exclude these 19 “weak” experiments, and believe that restricting all analysis to remaining 30 experiments did not bias the study.
+For each TE estimation, we also calculated a corresponding p-value, to quantify whether the observed TE was significantly different from the set of TE estimations obtained on surrogate data, corresponding to a null hypothesis of no causal connections, and all network activity due to shared drive. With the computational power available, we could only afford to generate 1000 surrogate reshuffled networks for every TE calculation, which made it impossible to use the false discovery rate correction on our data, as it is recommended for large-scale studies of brain connectivity [Vicente 2011; Lindner 2011]. With $\sim$10$^2$ neurons and 10$^4$ connections the smallest possible non-zero p-value of 0.001, corresponding to finding a more extreme TE value in one out of 1000 surrogate experiments, was already larger than the Benjamini-Hochberg threshold of $\frac{k}{m}\alpha=$5e-6. With a permissive threshold of $\alpha$=0.01, each subset of data (recordings of responses to collisions, flashes, and scrambled stimuli), when taken separately, suggested the existence of 2\% to 69\% of all possible directed edges in the graph, depending on the experiment (median of 8\%). The share of edges that were independently discovered in all three types of experiments (median value of 0.1\% of all possible edges) was on average 1.8 times larger than one would expect in case of spurious and independent discovery (signrank $p$=7e-7), suggesting that the three subsets of data, originating from responses to three different stimuli, can be considered replications for the purposes of edge discovery. At the same time, when we tried to restrict our analysis only to edges that were fully replicated in all 3 sets with $\alpha < $0.05, we ended up with the median graph size of only 18 edges (6 edges in the largest connected component). The overwhelming majority (18 out of 19) of datasets with fewer than 10 reconstructed edges were recorded in the early set of experiments, when our dye transfer from DMSO to ACSF was still imperfect. As during data acquisition, we alternated between stage 46 and 49 tadpoles, the set of “weak” experiments was not biased, and consisted of 10 younger, and 9 older tadpoles. We decided to exclude these 19 “weak” experiments, and believe that restricting all analysis to remaining 30 experiments did not bias the study.
 
 One of the unique challenges of imaging protocols used in this study was the variable quality of staining achieved with the BAPTA-conjugated dye. As staining procedure involved a detergent, and called for high concentrations of dye, the most successful preparations were those that received the highest possible concentration of dye that did not yet kill the cells. Several preparations however either fell a little short of this target, and had a higher than optimal level of noise, or got overexposed, and had strong fluorescence, but weak responses to stimulation. The variable amount of uncertainty in edge detection from one experiment to another greatly complicated our network analysis.
 
@@ -350,67 +351,68 @@ To analyze degree distributions, we first calculated weighted in- and out-degree
 
 \textbf{Global network efficiency}. [refs] was calculated using a function from the Brain Connectivity Toolbox \citep{rubinov2010toolbox} on reciprocals for graph weights $R_{ij} = 1/w_{ij}$, and was defined as:
 
-$$E = \frac{1}{n} \sum_{i \neq j}^n{\frac{d_{ij}}{n-1}}$$
+\[ E = \frac{1}{n} \sum_{i \neq j}^n{\frac{d_{ij}}{n-1}} \]
 
 where $d_{ij}$ is the length of the shortest path $P_{ij}$ connecting nodes $i$ and $j$: $d_{ij} = \sum_{kl \in P_{ij}}{R_{kl}}$
 
 \textbf{Clustering coefficient} \citep{fagiolo2007} was calculated using the Brain Connectivity Toolbox, with a function that supported weighted directed graphs:
 
-$$C = \frac{1}{n} \sum_i{\frac {t_i}{(k^o_i+k^i_i)(k^o_i+k^i_i-1)-2\sum_j{w_{ij}w_{ji}}}}$$
+\[ C = \frac{1}{n} \sum_i{\frac {t_i}{(k^o_i+k^i_i)(k^o_i+k^i_i-1)-2\sum_j{w_{ij}w_{ji}}}} \]
 
 where $k^o_i$ and $k^i_i$ are out- and in-degrees of node $i$ respectively, and $t_i$ is the weighted number of directed triangles that include node $i$:
 
-$$t_i = \sum_{j \neq i}{\sum_{k \neq i,j}{w^{1/3}_{ij}w^{1/3}_{jk}w^{1/3}_{ki}}}$$
+\[ t_i = \sum_{j \neq i}{\sum_{k \neq i,j}{w^{1/3}_{ij}w^{1/3}_{jk}w^{1/3}_{ki}}} \]
 
 To estimate \textbf{network modularity}, we used a function from the Brain Connectivity Toolbox, which calculated spectral modularity on a weighted directed graph \citep{reichardt2006community,leicht2008community}.
 
-Our custom definition of \textbf{hierarchical flow} was inspired by \citep{mones2012hierarchy,mones2012hierarchy}, but based on the modified Katz centrality \citep{katz1953original,fletcher2018katz}. To calculate Katz centrality, we assumed that on average, each node $i$ collected a flow of incoming signals through all edges $w_{ij}$ leading to this node. The activation arriving through edge $ij$ was proportional to the total activation $z_j$ of node $j$, the weight of this edge $w_{ij}$, a normalization coefficient equal to $1/\text{max}*{*kl}(w{kl})$, and a damping factor of $d$=0.9. Each node also received a small amount of constant activation $(1-d)$=0.1. The total activation of each node was therefore defined as:
+Our custom definition of \textbf{hierarchical flow} was inspired by \citep{mones2012hierarchy,czegel2015hierarchy}, but based on the modified Katz centrality \citep{katz1953original,fletcher2018katz}. To calculate Katz centrality, we assumed that on average, each node $j$ collected a flow of incoming signals through all edges $w_{ji}$ leading to this node. The activation arriving through edge $j\leftarrow i$ was proportional to the total activation $z_i$ of node $i$, the weight of this edge $w_{ji}$, a normalization coefficient equal to $1/\text{max}(w_{kl})$, and a damping factor of $d$=0.9. Each node also received a small amount of constant activation $(1-d)$=0.1. The total activation of each node was therefore defined as:
 
-$$z_i = (1-d) + \frac{d}{\text{max}(w_{kl})} \sum_{j \neq i}{a_j w_{ij}}$$
+\[ z_j = (1-d) + \frac{d}{\text{max}_{k,l}(w_{kl})} \sum_{i \neq j}{a_i w_{ji}} \]
 
-Each node then further redirected this activation to other nodes. This definition is very close to that of pagerank centrality \citep{page1999pagerank}, with a minor difference that the weights are not normalized to the value of total outgoing weights for each node: that is, we work with raw weights of $w_{ij}$ rather than $w_{ij}/\sum_k{w_{kj}}$. It means that a node with many outputs has a strong influence over network activation, nodes with weak outgoing edges act almost as dead-ends. Similar to a standard pagerank algorithm, we found solution the stable solution of this problem iteratively, by initializing the network with equal values of centrality, and then running the equation above 100 times or until convergence. Once the distribution of centralities $z_i$ stabilized, we used the difference between the maximal Katz centrality and mean centrality across all nodes as a measure of hierarchical flow in the network [ref]: $h = \text{max}(z_i) - \text{mean}(z_i)$.
+Each node then further redirected this activation to other nodes. This definition is very close to that of pagerank centrality \citep{page1999pagerank}, with a minor difference that the weights are not normalized to the value of total outgoing weights for each node $i$: that is, we work with raw weights of $w_{ji}$ rather than $w_{ji}/\sum_k{w_{ki}}$. It means that a node with many outputs has a strong influence over network activation, nodes with weak outgoing edges act almost as dead-ends. Similar to a standard pagerank algorithm, we found solution the stable solution of this problem iteratively, by initializing the network with equal values of centrality, and then running the equation above 100 times or until convergence. Once the distribution of centralities $z_i$ stabilized, we used the difference between the maximal Katz centrality and mean centrality across all nodes as a measure of hierarchical flow in the network [ref]: $h = \text{max}(z_i) - \text{mean}(z_i)$.
 
 To check whether network values described above were different from values expected on a random graph, we performed a two-stage \textbf{graph randomization}. First, we randomized each graph using a variety degree-preserving reshuffling \citep{maslov2002}. To do so, for a network with $N_E$ edges we picked 3$\cdot N_E$ random pairs of nodes (nodes $i$, $j$, $k$, and $l$) that had strong connections from $i$ to $j$, and from $k$ to $l$, but weak connections from $i$ to $l$, and from $j$ to $k$ (we required $w_{ji}>w_{li}$ and $w_{lk}>w_{jk}$). We also required all four nodes be different ($i \neq j \neq k \neq l$). Then we cross-wired them, thus gradually randomizing network topology:
 
-$$\left \{ \begin{tabular}{l}  
+\[ \left \{ \begin{array}{l}  
 w_{ji} \leftarrow w_{li} \\ 
 w_{li} \leftarrow w_{ji} \\
 w_{lk} \leftarrow w_{jk} \\
-w_{jk} \leftarrow w_{lk}  \right \end{tabular}$$ 
+w_{jk} \leftarrow w_{lk}
+\end{array} \right. \]
 
 This approach to degree-preserving randomization is slightly different from the original formulation by \citep{maslov2002} in two ways. First, we explicitly don’t allow loops (self-edges) by requiring all four nodes be different. Second, we allow nodes $i$ and $k$, as well as $l$ and $j$ to be connected before the rewiring, and just swap corresponding edge weights, which seems to be a necessary adjustment for directed weighted graphs. It also means that strictly speaking, for a weighted graph, our randomization only preserves out-degrees, but not in-degrees. Because of the requirement that $w_{ji}>w_{li}$ and $w_{lk}>w_{jk}$, for a binary directed graph our algorithm preserves in-degrees strictly, as it becomes identical too version by Maslov, while for nearly-binary graphs (bimodal or sparse), it tends to preserve in-degrees on average.
 
-Then, at the next step, we completely randomized connections by randomly swapping weights of edges $w_{ji}$ and $w_{lk}$, including zero weighs, which disrupted both in- and out-degree distributions, and led to a random Erd\H{o}s graph with the same distribution of weight values $w_{ij}$ as in the original graph. We then compared original network measures (on the actually observed graph) to those calculated on degree-preserving rewired graphs (averaged across 20-50 rewirings), and to those calculated on fully rewired graphs (averaged across same number of rewirings). This allowed us too differentiate between the effects of graph structure, and non-random degree distribution.
+Then, at the next step, we completely randomized connections by randomly swapping weights of edges $w_{ji}$ and $w_{lk}$, including zero weighs, which disrupted both in- and out-degree distributions, and led to a random Erd\H{o}s graph with the same distribution of edge weights as in the original graph. We then compared original network measures (on the actually observed graph) to those calculated on degree-preserving rewired graphs (averaged across 20-50 rewirings), and to those calculated on fully rewired graphs (averaged across same number of rewirings). This allowed us too differentiate between the effects of graph structure, and non-random degree distribution.
 
 We also tested whether the connectivity and position of selective cells within the graph is in any way peculiar, by calculating Pearson correlations between cell selectivity and several different graph centrality measurements. Here, we used three centrality measures: weighted in-degree (the sum of weights of all connections to the node); Katz centrality; and clustering coefficient.
 
 To study the distribution of cell selectivity within the graph, we used \textbf{weighted assortativity} as a measure of non-random association of selective cells into subnetworks. The formula for a mixing coefficient in a weighted directed network is given in \citep{farine2014weighted}, based on the logic from \citep{newman2003mixing} and \citep{leung2007weighted}. The original formula from \citep{newman2003mixing} for an unweighted undirected graph defines a mixing coefficient as a Pearson correlation coefficient between properties of nodes connected by edges, taken over all edges in the graph:
 
-$$r=\underset{ij: a_{ij}=1}{\text{corr}}(x_i,x_j)$$
+\[ r=\underset{ij: a_{ij}=1}{\text{corr}}(x_i,x_j) \]
 
 leading to the following expression:
 
-$$r = \frac{\frac{1}{E} \sum{x_i x_j} - [\frac{1}{E} \sum{\frac{1}{2}(x_i+x_j)}]^2} {\frac{1}{E} \sum{(x_i^2+x_j^2)}-[\frac{1}{E} \sum{\frac{1}{2}(x_i+x_j)}]^2}$$
+\[ r = \frac{\frac{1}{E} \sum{x_i x_j} - [\frac{1}{E} \sum{\frac{1}{2}(x_i+x_j)}]^2} {\frac{1}{E} \sum{(x_i^2+x_j^2)}-[\frac{1}{E} \sum{\frac{1}{2}(x_i+x_j)}]^2} \]
 
 where sums are taken over all connected edges $ij: a_{ij}=1$, and $E$ is the total number of edges.
 
-For a weighted graph an equivalent measure can be introduced by replacing summation over edges to summation over all possible pairs of nodes $ij$, with weights $w_{ij}$ introduced in each sum. The resulting expression can be rewritten in several different ways \citep{newman2003mixing,leung2007weighted,farine2014weighted,teller2014assortative}, with several alternative bulky expressions ultimately describing a weighted correlation calculated across all connected directed edges $ij$:
+For a weighted graph an equivalent measure can be introduced by replacing summation over edges to summation over all possible pairs of nodes $ij$, with weights $w_{ij}$ introduced in each sum. The resulting expression can be rewritten in several different ways \citep{newman2003mixing,leung2007weighted,farine2014weighted,teller2014assortative}, with several alternative bulky expressions ultimately describing a weighted correlation calculated across all connected directed edges $ij$ with edge values $w_{ij}$ used as correlation weights:
 
-$$r=\text{cor}(x_i,x_j \, , \, w_{ij})$$
+\[ r=\text{cor}(x_i \, , \, x_j \, , \, w_{ij}) \]
 
 where weighted correlation $\text{cor}(a,b,w)$ is introduced through weighted covariances: 
 
-$$\text{cor}(a,b,w) = \frac{\text{cov}(a,b,w)}{\sqrt{\text{cov}(a,a,w) \cdot \text{cov}(b,b,w)}}$$
+\[ \text{cor}(a,b,w) = \frac{\text{cov}(a,b,w)}{\sqrt{\text{cov}(a,a,w) \cdot \text{cov}(b,b,w)}} \]
 
 that in turn are defined as: 
 
-$$\text{cov}(a,b,w) = \frac{\sum_i{w_i \cdot (a_i-\bar{a})(b_i-\bar{b})}}{\sum_i{w_i}}$$
+\[ \text{cov}(a,b,w) = \frac{\sum_i{w_i \cdot (a_i-\bar{a})(b_i-\bar{b})}}{\sum_i{w_i}} \]
 
 with $\bar{a}$ and $\bar{b}$ representing weighted mean values: 
 
-$$\bar{a}=\sum_i{w_i a_i}/\sum_i{w_i}$$
+\[ \bar{a}=\sum_i{w_i a_i}/\sum_i{w_i} \]
 
-Note that this formula differs slightly from the one used in the Brain Connectivity Toolbox \citep{rubinov2010toolbox}.
+Note that this definition seems to differ slightly from the one used in the Brain Connectivity Toolbox \citep{rubinov2010toolbox}.
 
 \textbf{Unreported analyses}. For the sake of transparency, we report the list of measures that were calculated, but were hard to interpret, and so were not included in the final manuscript: four measures of weighted directed degree assortativity (in-in, in-out, out-in, and out-out); pagerank centrality; Katz centrality on reversed graph $W'$; hierarchical flow for reversed graph; node reach on direct and reversed graphs (unweighted analog of Katz centrality without attenuation); as an alternative measure of cell selectivity, McFadden’s pseudo-$R$ for a logistic fit of stimulus identity to the total response of each cell. We also made several attempts to estimate the prevalence of directed cycles in our networks, but these new measures require further validation.
 
@@ -422,56 +424,56 @@ Cells were connected to each other with “synapses” of different strengths, r
 
 At each time step we first calculated the raw activation \textbf{A} of all neurons: $\textbf{A} = \textbf{WS} + \textbf{B}$, where \textbf{W} is the connectivity matrix, \textbf{S} is the vector of instantaneous spiking rates $s_i$ , and \textbf{B} is the sensory input (see below). For one cell, we have:
 
-$$a_i(t+1) = \sum_j{w_{ij}s_j(t)} + b_i(t)$$
+\[ a_i(t+1) = \sum_j{w_{ij}s_j(t)} + b_i(t) \]
 
 These raw activation values were then adjusted down, by a formula representing global feedback inhibition, which helped to avoid run-away excitation early in development:
 
-$$\end{equation}a'_i(t+1) = \left \{ \begin{tabular}{l l} a_i(t+1)
+\[ a'_i(t+1) = \left \{ \begin{array}{l l} a_i(t+1)
 & \text{if } \sum_j{s_j(t)} \leqslant \zeta \\ 
  & \\
 a_i(t+1)\Big/ \Big(1 + \big(\sum_j{s_j(t)} - \zeta\big) \cdot \exp(- t/\tau_e)\Big) 
-& \text{otherwise.} \end{tabular} \right.$$
+& \text{otherwise.} \end{array} \right. \]
 
-Here $a’_i(t)$ is the final, adjusted value of activation for every cell; $\sum_j{s_j(t)}$ is the total sum of all cell activities at the previous time step; $\zeta$ is a constant that sets the level of total activity at which inhibition “turns on”, and that in our case was set to the size of the grid of cells \mbox{$\zeta=$ 9}. The exponent $\exp(-t/\tau_e)$ serves as an “easing” function that gradually “eases” the network from inhibition-dominated mode of operation to “free” operation, with a time constant $\tau_e=$ 0.056. This “easing” formula was a practical compromise that greatly sped up our computational experiments, as it dampened network activity early on, when network was still close to randomly connected, and so prone to seizure-like activity, but allowed the simulation run on its own later in development.
+Here $a'_i(t)$ is the final, adjusted value of activation for every cell; $\sum_j{s_j(t)}$ is the total sum of all cell activities at the previous time step; $\zeta$ is a constant that sets the level of total activity at which inhibition “turns on”, and that in our case was set to the size of the grid of cells \mbox{$\zeta=$ 9}. The exponent $\exp(-t/\tau_e)$ serves as an “easing” function that gradually “eases” the network from inhibition-dominated mode of operation to “free” operation, with a time constant $\tau_e=$ 0.056. This “easing” formula was a practical compromise that greatly sped up our computational experiments, as it dampened network activity early on, when network was still close to randomly connected, and so prone to seizure-like activity, but allowed the simulation run on its own later in development.
 
-The activity of each neuron $s_i(t)$ was then calculated from its total activation $a’_i(t)$:
+The activity of each neuron $s_i(t)$ was then calculated from its total activation $a'_i(t)$:
 
-$$s_i(t) = g_i\big(a'_i(t)\big)$$
+\[ s_i(t) = g_i\big(a'_i(t)\big) \]
 
 using a logistic activation function: 
 
-$$g_i(a) = 1/\Big(1+\exp\big(c\cdot(h_i(t)-a)\big)\Big)$$
+\[ g_i(a) = 1/\Big(1+\exp\big(c\cdot(h_i(t)-a)\big)\Big) \]
 
 where $c$ is a steepness parameter, set at $c=$ 20, and $h_i(t)$ is the current spiking threshold of cell $i$. At the beginning of each simulation, spiking thresholds $h_i(0)$ were set to random values, uniformly distributed in a narrow band between $1/(n \hat{s_i})$ and $1/(n \hat{s_i}_i)+0.1$ . During the simulation, the thresholds $h_i(t)$ were updated at each time step, to model the effect of \textbf{intrinsic homeostatic plasticity}. For this purpose, for each cell, we kept track of its running average spiking rate $\bar{s_i}(t)$, and updated both average spiking rates and spiking thresholds $h_i(t)$ by the following formulas:
 
-$$\bar{s_i}(t+1) = (1-\kappa)\bar{s_i}(t) + \kappa s_i(t)$$
+\[ \bar{s_i}(t+1) = (1-\kappa)\bar{s_i}(t) + \kappa s_i(t) \]
 
-$$h_i(t+1) = h_i(t) - r_h(\hat{s_i} - \bar{s_i}(t))$$
+\[ h_i(t+1) = h_i(t) - r_h(\hat{s_i} - \bar{s_i}(t)) \]
 
 where $\kappa=$ 0.05 is a constant that controls the rate of averaging, and $r_h=$ 0.1 is the rate at which spiking thresholds $h_i$ were allowed to adjust, to bring the discrepancy between the target spiking rate $\hat{s_i}$ and running average spiking rate $\bar{s_i}(t)$ to zero.
 
 Once spiking of each neuron at the new time step $s_i(t)$ was calculated, we performed the \textbf{spike-time dependent plasticity} (STDP) step, and adjusted synaptic weights $w_{ji}$ linking neurons in the network. The intuition behind STDP in discrete time can be described by the following system, with options 1 and 2 not mutually exclusive:
 
-$$w_{ji}(t+1) = \left \{ \begin{tabular}{lll} w_{ji}(t)+\epsilon, & \text{if } s_i(t)\neq 0 \text{ and } s_j(t+1)\neq 0 \\ w_{ji}(t)-\epsilon, & \text{if } s_i(t)\neq 0 \text{ and } s_j(t)\neq 0 \\ w_{ji}(t) & \text{if } s_i(t)=0\end{tabular} \right.$$
+\[ w_{ji}(t+1) = \left \{ \begin{array}{lll} w_{ji}(t)+\epsilon, & \text{if } s_i(t)\neq 0 \text{ and } s_j(t+1)\neq 0 \\ w_{ji}(t)-\epsilon, & \text{if } s_i(t)\neq 0 \text{ and } s_j(t)\neq 0 \\ w_{ji}(t) & \text{if } s_i(t)=0\end{array} \right. \]
 
 As in our model neuronal activity $s_i(t)$ was continuous, the non-exclusive system above can be represented by the formula:
 
-$$w_{ji}(t+1) = w_{ji}(t) + r_w \big(s_i(t)w_{ji}(t)s_j(t+1) - s_i(t)w_{ji}(t)s_j(t)\big)$$
+\[ w_{ji}(t+1) = w_{ji}(t) + r_w \big(s_i(t)w_{ji}(t)s_j(t+1) - s_i(t)w_{ji}(t)s_j(t)\big) \]
 
 or
 
-$$w_{ji}(t+1) = w_{ji}(t)\cdot\Big(1+r_w\big(s_j(t+1)-s_j(t)\big)s_i(t)\Big)$$
+\[ w_{ji}(t+1) = w_{ji}(t)\cdot\Big(1+r_w\big(s_j(t+1)-s_j(t)\big)s_i(t)\Big) \]
 
 where $r_w$ is a constant that controls the level of synaptic plasticity; for this model $r_w$ = 0.25 .
 
 Finally, we modeled \textbf{synaptic competition} by introducing a negative feedback, to limit the total sum of all inputs to each neuron, and all output of each neuron. At every time step, we used the weight matrix W to calculate a modified matrix $\textbf{W}^\text{i}$, with sum of inputs to each neuron normalized to a certain fixed value $g$ = 1.5, and a modified weight matrix $\textbf{W}^\text{o}$, for which the total sum of outputs of each neuron was normalized to the same value: 
 
-$$w_{ji}^\text{i} = g \cdot w_{ji}/\sum_k{w_{jk}}$$
-$$w_{ji}^\text{o} = g \cdot w_{ji}/\sum_k{w_{ki}}$$
+\[ w_{ji}^\text{i} = g \cdot w_{ji}/\sum_k{w_{jk}} \]
+\[ w_{ji}^\text{o} = g \cdot w_{ji}/\sum_k{w_{ki}} \]
 
 We then “moved” our actual weight matrix in the direction of the average of these two normalized matrices:
 
-$$w_{ji}(t+1) = 0.4 \cdot w_{ji} + 0.3 \cdot w^\text{i}_{ji} + 0.3 \cdot w^\text{o}_{ji}$$
+\[ w_{ji}(t+1) = 0.4 \cdot w_{ji} + 0.3 \cdot w^\text{i}_{ji} + 0.3 \cdot w^\text{o}_{ji} \]
 
 Networks were activated with \textbf{simulated visual stimuli} that resembled sensory activation a real animal would have experienced when navigating in a bright-lit environment with sparsely placed black spheres. For general visual stimulation (only used in sensitivity experiments), we repeatedly created unique collision events, with randomized original position of a black sphere relative to the tadpole, final distance to the tadpole, and direction of movement through the visual field. We would then move the projection of this virtual sphere across the virtual retina over a course of $\tau=$10 time frames.  When training on looming stimuli (main series of computational experiments), we still initiated objects at random points within the visual field, but made sure that they approached the eye on a "collision trajectory", and at some point covered the entirety of the visual field. When training on noise, we generated random noise with $\zeta$=9 pixels flicking on at any given time. For looming and "general visual" stimuli, a projection of a sphere on the virtual retina was a solid circle, with its center moving linearly $(x,y) = (x_0,y_0)+(v_x,v_y)\cdot t/\tau$, and circle radius changing as $R(t) = R_0/(d_0 - v_z*t/\tau)$. The virtual retina consisted of 81 pixels, arranged in a 9x9 grid, that generated both "ON" and "OFF" responses without delay or bursting, as an exclusive OR of two consecutive projections $\text{in}(t) = \text{XOR}(\text{img}(t),\text{img}(t-1))$, and had one-to-one projections to nodes in the model network.For testing, we compared responses to flashes, crashes, and scrambled stimuli. "Crashes" were different from looming stimuli in that the change of projection radius with time was linear $R(t) = \sqrt{2}\zeta/2(t/\tau)$, rather than realistic; this was because we used linearly expending looming stimuli in biological experiments, both in this study, and in earlier studies \citep{khakhalin2014}. "Scrambled" stimuli were identical to "Crashes", with all 81 pixels randomly reassigned. "Flashes" were modeled as very fast looming stimuli that took exactly 2 frames to fill the entire field of view, and with pixels reshuffled; we had to use this approximation to introduce some variability into responses to flashes, while keeping them as close to instantaneous as possible.
 
@@ -487,11 +489,11 @@ For model \textbf{sensitivity analysis}, we removed or attenuated parts of the m
 
 \textbf{No STDP plasticity}. Instead of a described above equation 
 
-$$w_{ji}(t+1) = w_{ji}(t)\cdot\Big(1+r_w\big(s_j(t+1)-s_j(t)\big)s_i(t)\Big)$$
+\[ w_{ji}(t+1) = w_{ji}(t)\cdot\Big(1+r_w\big(s_j(t+1)-s_j(t)\big)s_i(t)\Big) \]
 
 we used an equation with symmetrical Hebb plasticity, and no negative depression term: 
 
-$$w_{ji}(t+1) = w_{ji}(t)\cdot\Big(1+r_w\big(s_j(t+1)\big)s_i(t)\Big)$$
+\[ w_{ji}(t+1) = w_{ji}(t)\cdot\Big(1+r_w\big(s_j(t+1)\big)s_i(t)\Big) \]
 
 \textbf{No synaptic competition}. Instead of sliding renormalization of all inputs and outputs of each neuron, we allowed synaptic weights to decay to zero: $w_{ji}(t+1) = w_{ji}(t)\cdot (1-\beta)$, where $\beta$ = 0.001.
 
