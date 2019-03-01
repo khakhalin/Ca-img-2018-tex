@@ -129,8 +129,8 @@ For all mathematical methods, we provide their names and their interpretation in
 
 We performed Ca imaging in 14 stage 45-46 tadpoles, and 16 stage 48-49 tadpoles, recording responses from 128$\pm$40 tectal cells (between 84 and 229; here and below “$\pm$” after the mean denotes standard deviation). Unless stated otherwise, sample sizes $n=$ 14 and 16 animals for stage 46 and 49 tadpoles apply to all analyses between younger and older animals in this study. To each tadpole, we presented a sequence of three different stimuli, always in the same order: a dark-on-light "Looming" stimulus, followed by a full-field dark "Flash", followed by a spatially "Scrambled" looming stimulus (Fig 1A). Scrambled stimuli were identical to looming, except that the visual field was split into a 7x7 grid of square tiles, and these tiles were randomly rearranged in space. In total we presented 60$\pm$11 stimuli to every animal, which means that a stimulus of every type was presented 20$\pm$4 times. We recorded high speed calcium imaging signals \citep{xu2011,truszkowski2017} from one layer of “deep” principal tectal neurons in the tectum (Fig 1B,C); extracted fluorescence traces (Fig 1D,E), and inferred instantaneous spiking rate for each neuron within every frame (Fig 1F,G).
 
-\begin{figure*}
-\includegraphics[width=\linewidth]{fig1.png}
+\begin{figure*}[t]
+\includegraphics[width=\linewidth]{fig1.pdf}
 \caption{
 Experimental design overview. \textbf{A}. Four representative frames from visual stimuli of each type. \textbf{B}. Schematic of the preparation. \textbf{C}. View of the optic tectum during the calcium imaging recording. \textbf{D}. Matching regions of interest and average responses in each cell. \textbf{E}. Typical fluorescence responses to flash (F), scramble (S) and looming (L) stimuli from three cells in the tectum. \textbf{F}. Spiking estimations for these fluorescence traces. \textbf{G}. Average full-brain responses to stimuli of every type, wich 95\% confidence interval band, for one representative experiment. }
 \end{figure*}
@@ -142,7 +142,7 @@ As reported previously in electrophysiology experiments \citep{khakhalin2014}, r
 The total output of observed networks tended to be higher in response to looming stimuli than to flashes (on average, 39$\pm$29\% higher for younger; 25$\pm$25\% higher for older tadpoles; $p_{t1}=$ 2e-4 and 1e-3 respectively; Fig. 2B). There was no change in this preference in development ($p_t$=0.15). There was no difference in response amplitude between looming and scrambled stimuli (average difference of $-$0.03$\pm$0.15 and $-$0.01$\pm$0.20; $p_{t1}=$ 0.45 and 0.78 for younger and older animals respectively; no difference in development $p_t=$ 0.80). These results support our prior observation that the total tectal response in tadpoles depends mostly on the dynamics of visual stimuli, rather than on their geometry \citep{khakhalin2014,jang2016}.
 
 \begin{figure*}
-\includegraphics[width=\linewidth]{fig2.png}
+\includegraphics[width=\linewidth]{fig2.pdf}
 \caption{
 Selectivity analysis. \textbf{A}. \textbf{B}. \textbf{C}. \textbf{D}. \textbf{E}. \textbf{F}. }
 \end{figure*}
@@ -159,7 +159,7 @@ Finally, as a holistic way to quantify tectal network selectivity, we looked at 
 
 To assess the variability of responses from one tectal cell to another, we performed exploratory factor analysis (principal component analysis, followed by promax rotation) of responses within each preparation. This analysis was restricted to looming stimuli. The first and second principal components explained on average 19$\pm$7\% and 4$\pm$1\% of variance in younger tadpoles, and 24$\pm$14\% and 3$\pm$1\% in older tadpoles, and largely encoded different response timing (Fig. 3A). Cells with early responses to looming stimuli tended to group together within the recorded field (Fig. 3B), and their spatial clustering was reliably identified in each of 30 experiments (see Methods). The most natural explanation for this spatial clustering is that a retinotopic map, which is well known to be present in the tectum \citep{ruthazer2004map}, reproduced a looming stimulus projected on the retina. Across cells, the latency of average response correlated with distance from the retinotopy center ($r=$ 0.35 $\pm$ 0.24; correlations individually significant in 25/30 experiments), despite our latency estimations being noisy, especially for low-amplitude cells (see Methods). Curiously, while visual projections to the tectum are known to be actively remodeled in development \citep{sakaguchi1985refinement,ruthazer2004map,munz2014hebbian}, the quality of functional retinotopic map did not differ between younger and older tadpoles, as correlations between early component prominence and cell position did not change in development (Fig. 3E; $r=$ 0.63 $\pm$ 0.21 and 0.57 $\pm$ 0.25 respectively, $p_t= $0.5), which is similar to reports in Zebrafish \citep{avitan2016limitations}.
 
-\begin{figure*}
+\begin{figure*}[t]
 \includegraphics[width=\linewidth]{fig3.png}
 \caption{
 Spatial variability. \textbf{A}. \textbf{B}. \textbf{C}. \textbf{D}. \textbf{E}. \textbf{F}. }
@@ -178,7 +178,7 @@ To better describe network activation variability, we used spectral clustering t
 \begin{figure*}[t]
 \includegraphics[width=\linewidth]{fig4.pdf}
 \caption{
-Spatial variability. \textbf{A}. \textbf{B}. \textbf{C}. \textbf{D}. \textbf{E}. \textbf{F}. }
+Spatial variability. \textbf{A}. Connectivity reconstruction for one experiment, with location of each cell preserved. \textbf{B}. Same graph, optimized for graph presentation. Position of individual nodes no longer represents the position of tectal cells. \textbf{C}. Rounded in-degree distribution for younger (green) and older (blue) tadpoles, shown in log-scale. Significant changes for individual degrees ($p_t<$ 0.05) are marked with asterisks. \textbf{D}. Same as C, but for out-degree distributions. \textbf{E}. Network power increased in development, as older tadpoles had a slightly sharper slope to their degree distributions. }
 \end{figure*}
 
 The high speed of video acquisition used in this study (83 frames/s) allowed us to look not just at instantaneous correlations between activation of individual neurons, but at the propagation of signals through the network. In \textit{Xenopus} preparations, it takes about 5 ms for a presynaptic action potential to evoke neurotransmitter release in a typical tectal synapse \citep{khakhalin2012}, and about 10 ms for a typical synaptic current to depolarize postsynaptic neuron above the spiking threshold \citep{ciarleglio2015,busch2019}, which makes the frame-to-frame delay in our video recordings (12 ms) well posed to infer neuronal connections from activity.
@@ -204,7 +204,7 @@ For each connectivity graph reconstructed from tadpole tecta, we calculated seve
 \begin{figure*}[t]
 \includegraphics[width=\linewidth]{fig5.pdf}
 \caption{
-Spatial variability. \textbf{A}. \textbf{B}. \textbf{C}. \textbf{D}. \textbf{E}. \textbf{F}. }
+Global network properties. Network diagrams near each plot present typical topology of graphs with low and high values of respective network measure. \textbf{A}. Global network efficiency was lower than expected for younger tadpoles (see text). \textbf{B}. Network modularity increased in development. \textbf{C}. Global clustering was higher than expected by chance, for both developmental stages. \textbf{D}. Network hierarchy was higher than expected by chance, for both developimental stages. }
 \end{figure*}
 
 The measure of average "connectedness" in the graph, known as \textbf{network efficiency}, is defined as the average inverse shortest path for any two nodes in the network \citep{latora2001efficiency}. This value is high when there tend to be short paths between any two randomly chosen nodes, and signals can easily propagate within the graph; the value is low when some nodes are located far from each other on a graph (Figure 5A). For a connectivity graph, high edge weights represent strong connections, so network efficiency is calculated on inverse weights $R_{ji} = 1/w_{ji}$ \citep{rubinov2010toolbox}. We found that network efficiency (0.004$\pm$0.002 for stage 46, 0.002$\pm$0.002 for stage 49 tadpoles) was slightly lower than expected for a randomized network with matching degree distribution ($d$=$-$0.3, paired $p_t$=0.04 and $d$=$-$0.3, paired $p_t$=0.06 for younger and older tadpoles respectively). Efficiency did not seem to change with age ($d$=$-$0.8, $p_t$=0.06).
@@ -219,6 +219,12 @@ Network \textbf{modularity} is the most commonly used measure of mesoscale netwo
 
 Even though the exact architecture of collision-detecting tectal networks is unknown, it is safe to assume that looming-selective neurons integrate streams of information from different parts of the visual field. We therefore hypothesized that the position of selective neurons within connectivity graphs would not be random \citep{timme2016degree}. To verify that, for each reconstructed network we tested correlations between looming selectivity of each neuron and values that quantify its place within the network, known as measures of \textbf{centrality}.
 
+\begin{figure*}[t]
+\includegraphics[width=\linewidth]{fig6.pdf}
+\caption{
+Local network properties for cells selective for looming stimuli. \textbf{A}. Sells with higher Katz centrality has a very weak tendency to be selective for looming stimuli. A diagram inset illustrates the concept of Katz centrality: for this graph, cells with low centrality (sources) are pale, while cells with higher centrality (sinks) are darker. \textbf{B}. Correlation coefficients between Katz centrality of each cell and its selectivity for looming stimuli, calculated separately for each experiment, shown by developmental stage. \textbf{C}. Correlation coefficients between node in-degree and its selectivity for looming stimuli, in each experiment, shown by developmental stage. \textbf{D}. Correlation coefficients between spiking of each neuron, and its selectivity for looming stimuli, calculated for each experiment, and shown by developmental stage. }
+\end{figure*}
+
 To identify information sinks, for each cell we calculated its \textbf{Katz centrality} within the graph \citep{katz1953original,fletcher2018katz}. By definition, nodes with high Katz centrality have many paths leading to them, so a spike originating at random within a graph is more likely to eventually cause activation of these nodes, compared to a node with a low Katz centrality. We found that when all cells from all experiments are considered (Figure 6A), there was a weak correlation between looming selectivity of cells and their Katz centrality ($r =$ 0.02, $p_{r} =$ 1e-6, $n=$2487). Correlation coefficients between Katz centrality and looming selectivity were positive in 19/30 experiments (Figure 6B; average $r=$ 0.09$\pm$0.20 $p_{t1}=$ 0.03), and there was no change of this effect in development ($p_t=$ 0.5).
 
 A node may have high Katz centrality for two reasons: it may receive a higher number of incoming connections (higher in-degree), or have chains of directed edges lead to it. To see which of these patterns may be at work here, we checked whether looming-selective cells received more incoming connections, compared to non-selective cells \citep{litwin2014assemblies}. When all points were considered, there was no correlation between in-degree and cell selectivity ($p_{r}=$0.3, $n=$ 2487), but for individual experiments correlation coefficients between in-degree and selectivity were positive in 20/30 of cases (Figure 6C, $p_{t1}=$ 0.03). There was no change of this correlation in development ($p_t=$0.5).
@@ -229,7 +235,7 @@ As cells with higher Katz centrality tend to be activated more often \citep{flet
 
 If looming-selective cells gather information from the network, it was plausible to expect that they could be more likely connected to other selective cells, rather than to non-selective ones. To test this, we looked into \textbf{assortativity of selectivity}: a weighted correlation between selectivity scores of cells connected by edges, with strength of these edges used as weight (see Methods). We found that in both younger and older tadpoles selectivities of connected cells correlated (for stage 46: $r$=0.07$\pm$0.13, $p_{t1}$=0.04, individual $r>$0 in 9/14 experiments; for stage 49: $r$=0.07$\pm$0.10, $p_{tq}$=0.02; individual $r>$0 in 10/16 experiments). This suggests that similarly selective cells tended to be connected to each other. There was no change in this effect over development ($p_t=$ 0.9).
 
-% LOOK AT THE PLOT
+% Plot for assortativity shows perfectly no change. Is it worth showing here?
 
 Finally, we checked whether higher average activity of looming-selective cells linked them into tight clusters, or "rich clubs". We calculated \textbf{local clustering coefficient} for each cell, and checked whether it correlated with cell selectivity. We found that local clustering coefficient did not correlate with cell selectivity when all cells were considered ($p_r=$ 0.6, n=2487), and across all reconstruction, correlation coefficients observed in individual experiments were not different from zero ($p_t1=$ 0.25, n=30), indicating that while selective cells tended to be connected to each other, they did not form clusters.
 
@@ -239,19 +245,20 @@ Together these results suggest that the distribution of selective cells in tecta
 
 \subsection*{Developmental Model}
 
-\begin{figure*}[t!]
-\includegraphics[width=\linewidth]{fig6.png}
-\caption{
-Spatial variability. \textbf{A}. \textbf{B}. \textbf{C}. \textbf{D}. \textbf{E}. \textbf{F}. }
-\end{figure*}
-
 As tectal networks are complex and noisy, it was hard to provide a clear mechanistic interpretation of our experimental results. To compensate for this limitation, and to provide a theoretical counterpoint to our experimental observations, we built a mathematical model of the developing tectum, and ran this model through the same set of measurements that we applied to our experiments. The model consisted of 81 artificial neurons, arranged in a 9$\times$9 grid, and all originally connected to each other (every neuron to every neuron) with random positive (excitatory) synaptic weights (Fig XXX). The model operated in 10 ms increments, and we interpreted the output of each neuron as its instantaneous firing rate. At each time step we looked at the network activity in the previous step, and summed up the inputs each neuron would receive from each other neuron. We then used a sliding logistic function to translate these synaptic inputs into postsynaptic spiking (see “Methods” for details).
+
+\begin{figure*}[!t]
+\includegraphics[width=\linewidth]{fig6.png}
+% Should be fig7.pdf
+\caption{
+Developmental model. \textbf{A}. \textbf{B}. \textbf{C}. \textbf{D}. \textbf{E}. \textbf{F}. }
+\end{figure*}
 
 To allow the network develop in time, we introduced three simple developmental rules: spike-time-dependent plasticity (STDP), homeostatic plasticity, and synaptic competition. Our implementation of STDP approximated biological STDP, as observed in the tadpole tectum \citep{zhang1998stdp,mu2006stdp}: if two cells were active in two consecutive time frames, and they were connected with a synapse, the weight of this synapse was increased. Conversely, if two cells were active within the same time frame, the weight of a synapse connecting them was decreased, as it means that one cell would try to activate another cell after it had already spiked. The homeostatic plasticity rule adjusted excitability thresholds, trying to keep spiking output of each neuron constant on average \citep{pratt2007intrinsic,turrigiano2011}. The rule of synaptic competition attempted to keep constant the total strength of synaptic inputs to each neuron, as well as the total strength of outputs from each neuron, scaling all synapses of both input and output neurons towards a set target every time there was a change in synaptic efficiency \citep{hamodi2016nmda,cohen2002synreview,munz2014hebbian}.
 
 With these three rules at play, we exposed the model to patterned sensory stimulation, modeling retinotopic inputs from the eye. We hypothesized that in biological networks, STDP-driven changes may be amplified by a learning signal \citep{savin2014stdpreward,aswolinskiy2015stdpreward} originating either in dimming receptors in the retina \citep{baranauskas2012}, or mechanosensory systems of the hindbrain \citep{pratt2009multisens,felch2016,truszkowski2017}. We therefore only exposed our model to looming stimuli (but see sensitivity analyses described below). The network was allowed to develop for 12500 time steps (at least 500 looming stimuli), and we saved its topology at five equally spaced time points during this process, from a naive network, to the final state. We ran independent simulations 50 times, and for each network snapshot analyzed the connectivity graph, as well as the responses of each network to “model visual stimuli” that included a looming stimulus, a scrambled stimulus, and a full-field flash. We then analyzed these data in the same way as we did for biological experiments.
 
-\begin{figure*}[t!]
+\begin{figure*}
 \includegraphics[width=\linewidth]{fig7.png}
 \caption{
 Model results. \textbf{A}. \textbf{B}. \textbf{C}. \textbf{D}. \textbf{E}. \textbf{F}. }
