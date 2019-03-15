@@ -40,35 +40,36 @@ Av. SL selectivity, change & = & \land & \land \lor & \land & \lor & \land & = \
 corr(FS,FL) & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \times & \checkmark \\
 corr(SL,FL) & \times & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark\\
 Stim. decoding, change & = & \land & \land & \land & \lor & \land & \land \lor \\
-\hline
 PCA complexity & = & \land & \land & \land \lor & \land & \land & \land\\
-N Ensembles, change & \times & \times & \times & \times & \times & \times & \times \\
-Ensembles are spatially local & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark\\
-Ensembles are overconnected & \checkmark & \checkmark & \checkmark & \times & \checkmark & \checkmark & \checkmark\\
-\% two-way edges, change & \lor & \lor & \lor & \lor & \lor & \lor & \lor \\
+\hline
+\multicolumn{8}{l}{\textbf{Ensembles:}}\\
+Change in number & \times & \times & \times & \times & \times & \times & \times \\
+Spatial locality & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark\\
+Preferential connections  & \checkmark & \checkmark & \checkmark & \times & \checkmark & \checkmark & \checkmark\\
 \hline
 \multicolumn{8}{l}{\textbf{Connected cells:}}\\
 Are spatially close & \checkmark & \checkmark & \times & \times & \checkmark & \checkmark & \times \\
 Get closer in development& \times & \times & \times & \times & \times & \times & \times \\
 Edges point to periphery & = & = & = & \checkmark & = & = & =\\
+\% two-way edges, change & \lor & \lor & \lor & \lor & \lor & \lor & \lor \\
 %Edges increase selectivity & \times & \times & \times & \checkmark & \times & \times & \times \\
 \hline
 \multicolumn{8}{l}{\textbf{Network properties:}}\\
 %Degree $k=0$, change & \lor & \lor & \lor & \land & \lor & \lor & \lor \\
 %Degree $k=1-2$, change & \land & \land & \land & \lor & \land & \land & \land \\
 %Degree $k\geqslant 5$, change & \lor & \lor & \lor & \land & \lor & \lor & \lor \\
-Degree power constant $\gamma$ change & \land & \land & \land & \lor & \land & \land & \land \\
+Change in degree power ($\gamma$) & \land & \land & \land & \lor & \land & \land & \land \\
 Efficiency change & = & \land & \land & \lor & \land & \land & \land \\
 Clustering change & = & \lor & \lor & \lor & \lor & \lor & \lor \\
 Modularity change & \land & \land & \land & \land & \land & \land & \land \\
 Hierarchy change & = & \land & \land & \land & \land & \land & =\\
 \hline
 \multicolumn{8}{l}{\textbf{Properites of selective cells:}}\\
-Center / Periphery / No preference & \text{C} & \text{P} & \text{P} & \text{P} & \text{N} & \text{P} & \text{P}\\
+Center / Periphery location & \text{C} & \text{P} & \text{P} & \text{P} & \times & \text{P} & \text{P}\\
 Spatial grouping, change & \lor & \lor & \lor & \lor & \land & \lor & \lor \\
-Have high in-degree $k_{in}$ & \checkmark & \times & \times & \checkmark & \times & \times & \times\\
-Have high Katz rank & \checkmark & \times & \times & \checkmark & \times & \times & \times\\
-Are more spiky & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \times\\
-Assortatively connected & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark\\
+High in-degree $k_{in}$ & \checkmark & \times & \times & \checkmark & \times & \times & \times\\
+High Katz rank & \checkmark & \times & \times & \checkmark & \times & \times & \times\\
+High activity & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \times\\
+Connection assortativity & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark\\
 %Have unusual clustering coeff. & = & \text{low} & = & \text{high} & \text{low} & = & =\\
 \end{tabular}
