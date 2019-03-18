@@ -107,7 +107,20 @@ Looming is one of the most salient visual stimuli an animal may encounter, yet m
 
 \section*{Introduction}
 
-Few sensory stimuli are as ill boding for an animal as visual looming. A retinal projection that is small at first, but is quickly growing in size, may promise a painful collision, or a meeting with a predator, and so it inherently calls for an action: an avoidance maneuver, freezing, or defensive posturing, such as a blink. Moreover, to be meaningful, looming detection has to be fast. Not surprisingly, it is described in virtually every type of animals that uses vision, from insects to primates \citep{Pereira2016}.
+% Create tension. Build value. Why are you reading this? What is the point? How will reading this benefit the community you belong to, or your personally? Instability (tension). Don't describe the status quo; don't build a foundtation, describe the problem. Invest in tension (but, however, although, despite, paradox, inconsistency, unexpected, surprising, contradiction). Why does it matter? Gap in knowledge is good, but really we only care about problems that cost something.
+
+% Send to Silas: https://www.youtube.com/watch?v=vtIzMaLkCaM
+
+Few sensory stimuli are as ill boding for an animal as visual looming. A retinal projection that is small at first, but is quickly growing in size, may promise a painful collision, or a meeting with a predator, and so it inherently calls for an action: an avoidance maneuver, freezing, or defensive posturing, such as a blink. Moreover, to be meaningful, looming detection has to be fast. Not surprisingly, it is described in virtually every type of animals that uses vision, from insects to primates \citep{Pereira2016}. % While there was progress in invertebrates, in vertebrates - still unclear.
+
+% Three interesting problems: 1) how does it work in vertebrates, 2) how does it develop, for example, is it hardwired or learned. 
+% Then introduce possible solutions (across all animals).
+% Then introduce tectum (not currently present in the text), How to build a set of detectors to support looming stimuli coming from different directions? Cite frost here.
+% Then say that in view of this co-existence of different solutions (from 2 paragraphs above) isn't that much of a paradox. Exclude tadpoles form this paragraph though; or add zebrafish. Arrive at a synfire chanin hypothesis.
+% Then introduce tadpoles that are going to save the world. How they are so useful.
+% Then write about the golden standarad of figuring things out, and how our approach is better. 
+% Describe the model. 
+% Explain very clearly that we are trying to figure out 1) whether we can see pieces of topology in ca imaging recordings; 2) whether these pieces of topology look like something that could potentially support looming detection; 3) use a model to whether looming-detecting topology can emerge during reinforcement learning in a brain, and if yes, then what is the topology there, and whether it matches whatever was observed in biological experiments.
 
 In different animals, looming detection seems to rely on a variety of network solutions \citep{frost2004review} that include dimming detectors in the retina \citep{ishikane2005,munch2009}, opponent motion detection \citep{klapoetke2017looming}, and competitive spike-frequency adaptation \citep{peron2009adaptation,fotowat2011multiplexing}. Even within a single clade of anuran amphibians (frogs), animals seem to employ at least two competing looming detection mechanisms: non-linear detection of retinal oscillations \citep{baranauskas2012}, and rebound of recurrent activity \citep{khakhalin2014,jang2016}. Moreover, it seems that competing mechanisms may lead to different motor responses, as described in insects \citep{card2008tradeoffs,chan2013avoidance}, fish \citep{burgess2007twoescapes,portugues2009behaviors,budick2000repertoire,temizer2015pathway,bhattacharyya2017assessment}, and tadpoles \citep{khakhalin2014}.
 
@@ -541,6 +554,8 @@ where $c$ is a steepness parameter, set at $c=$ 20, and $h_i(t)$ is the current 
 where constant $\kappa=$ 0.05 controlled the rate of averaging, and constant $r_h=$ 0.1 set the strength of homeostatic plasticity, as it set the rate at which spiking thresholds $h_i$ were allowed to adjust, to bring the discrepancy between the target spiking rate $\hat{s_i}$ and running average spiking rate $\bar{s_i}(t)$ to zero.
 
 Once spiking activity of each neuron at the new time step $s_i(t)$ was calculated, we moved to the \textbf{spike-time dependent plasticity} (STDP) step, adjusting synaptic weights $w_{ji}$ that linked neurons in the network. In continuous time, STDP increases weight $w_{ji}$ if source neuron $i$ spikes before target neuron $j$, and decreases this weight if $i$ spikes after $j$, with the amplitude of weight change dropping off as the delay between these two spikes increases. In discrete time, we approximated STDP by the following system of cases, with options 1 and 2 not being mutually exclusive:
+
+% HORSE: that's where I stopped last time
 
 % target neuron could spike in response to  - CONTINUE THAT< NOT BEFORE IT SPIKEd, but befure it COULD spike
 
