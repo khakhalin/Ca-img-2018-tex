@@ -25,32 +25,31 @@
 \hline
 Brain FL selectivity & \checkmark & \checkmark & \checkmark & \checkmark & \times & \checkmark & \checkmark \\
 Brain selectivity, change & =	& \land	\lor	& 	\land \lor	& \land & = & \land & =\\
-Av. FL selectivity $d$ & \text{0.6} & \text{0.8} & \text{1.0} & \text{0.6} & -\text{7.0} & \text{0.8} & \text{0.5} \\
+Av. FL selectivity & \text{0.6} & \text{0.8} & \text{1.0} & \text{0.6} & -\text{7.0} & \text{0.8} & \text{0.5} \\
 Av. FL selectivity, change & = & \land & \land \lor & \land & \lor \land & \land & = \\
 \% FL select. cells & \text{80\%} & \text{98\%} & \text{95\%} & \text{75\%} & \text{0\%} & \text{95\%} & \text{95\%}\\
 \% FL select. cells, change & = & \land & \land & \land \lor & = & \land & \land\\
-FL skew, change & \lor & \land & \land \lor & \land & \land \lor & \land & =\\
 \hline
-Brain SL selectivity & \times & \checkmark & \checkmark & \checkmark & \times & \checkmark & \times  \\
-Av. SL selectivity $d$ & -\text{0.1} & \text{0.5} & \text{0.7} & \text{0.5} & -\text{0.5} & \text{0.2} & \text{0}\\
+Brain SL selectivity & \times & \times & \times & \times & \times & \times & \times  \\
+Av. SL selectivity & -\text{0.1} & \text{0.5} & \text{0.7} & \text{0.5} & -\text{0.5} & \text{0.2} & \text{0}\\
 Av. SL selectivity, change & = & \land & \land \lor & \land & \lor & \land & = \\
 \% SL select. cells & \text{50\%} & \text{80\%} & \text{90\%} & \text{70\%} & \text{20\%} & \text{70\%} & \text{50\%} \\
-\% SL select. cells, change & = & \land & \land & \land & \lor & \land & \lor \\
+\% SL select. cells, change & = & \land & \land & \land & \land \lor & \land & \lor \\
 %SL skew, change & = & \land & \land \lor & \land & - & \land \lor & -\\
-corr(FS,FL) & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \times & \checkmark \\
-corr(SL,FL) & \times & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark\\
-Stim. decoding, change & = & \land & \land & \land & \lor & \land & \land \lor \\
-PCA complexity & = & \land & \land & \land \lor & \land & \land & \land\\
+cor(FS, FL) & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \times & \checkmark \\
+cor(SL, FL) & \times & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark\\
+Stimulus encoding, change & = & \land & \land & \land & \lor & \land & \land \lor \\
+PCA, N components & = & \land & \land & \land \lor & \land & \land & \land\\
 \hline
 \multicolumn{8}{l}{\textbf{Ensembles:}}\\
-Change in number & \times & \times & \times & \times & \times & \times & \times \\
+N Ensembles, change & = & = & = & \land \lor & \land & = & = \\
 Spatial locality & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark\\
-Preferential connections  & \checkmark & \checkmark & \checkmark & \times & \checkmark & \checkmark & \checkmark\\
+Preferential connections  & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \times & \times \\
 \hline
 \multicolumn{8}{l}{\textbf{Connected cells:}}\\
-Are spatially close & \checkmark & \checkmark & \times & \times & \checkmark & \checkmark & \times \\
-Get closer in development& \times & \times & \times & \times & \times & \times & \times \\
-Edges point to periphery & = & = & = & \checkmark & = & = & =\\
+Are spatially close & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \times \\
+%Get closer in development& \times & \times & \times & \times & \times & \times & \times \\
+%Edges point to periphery & = & = & = & \checkmark & = & = & =\\
 \% two-way edges, change & \lor & \lor & \lor & \lor & \lor & \lor & \lor \\
 %Edges increase selectivity & \times & \times & \times & \checkmark & \times & \times & \times \\
 \hline
@@ -58,11 +57,11 @@ Edges point to periphery & = & = & = & \checkmark & = & = & =\\
 %Degree $k=0$, change & \lor & \lor & \lor & \land & \lor & \lor & \lor \\
 %Degree $k=1-2$, change & \land & \land & \land & \lor & \land & \land & \land \\
 %Degree $k\geqslant 5$, change & \lor & \lor & \lor & \land & \lor & \lor & \lor \\
-Change in degree power ($\gamma$) & \land & \land & \land & \lor & \land & \land & \land \\
-Efficiency change & = & \land & \land & \lor & \land & \land & \land \\
-Clustering change & = & \lor & \lor & \lor & \lor & \lor & \lor \\
-Modularity change & \land & \land & \land & \land & \land & \land & \land \\
-Hierarchy change & = & \land & \land & \land & \land & \land & =\\
+Degree power ($\gamma$), change & \land & \land & \land & \lor & \land & \land & \land \\
+Efficiency, change & = & \land & \land & = & \land & \land & \land \\
+Clustering, change & = & \lor & \lor & \lor & \lor & \lor & \lor \\
+Modularity, change & \land & \land & \land & \land & \land & \land & \land \\
+Hierarchy, change & = & \land & \land & \land & \land & \land & =\\
 \hline
 \multicolumn{8}{l}{\textbf{Properites of selective cells:}}\\
 Center / Periphery location & \text{C} & \text{P} & \text{P} & \text{P} & \times & \text{P} & \text{P}\\
@@ -70,6 +69,6 @@ Spatial grouping, change & \lor & \lor & \lor & \lor & \land & \lor & \lor \\
 High in-degree $k_{in}$ & \checkmark & \times & \times & \checkmark & \times & \times & \times\\
 High Katz rank & \checkmark & \times & \times & \checkmark & \times & \times & \times\\
 High activity & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \times\\
-Connection assortativity & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark\\
+Assortatively connected & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark\\
 %Have unusual clustering coeff. & = & \text{low} & = & \text{high} & \text{low} & = & =\\
 \end{tabular}
