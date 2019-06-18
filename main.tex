@@ -594,7 +594,7 @@ For \textbf{sensitivity analysis}, we either removed or greatly attenuated parts
 
 we used an equation with symmetrical Hebb plasticity, and no negative depression term: 
 
-\[ w_{ji}(t+1) = w_{ji}(t)\cdot\Big(1+r_w \cdot s_j(t+1) \cdot s_i(t)\Big) \]
+\[ w_{ji}(t+1) = w_{ji}(t)\cdot\Big(1+r_w \cdot s_j(t) \cdot s_i(t)\Big) \]
 
 \textbf{No synaptic competition}. Instead of sliding renormalization of all inputs and outputs of each neuron, we allowed synaptic weights to decay to zero: $w_{ji}(t+1) = w_{ji}(t)\cdot (1-\beta)$, where $\beta$ = 0.001.
 
